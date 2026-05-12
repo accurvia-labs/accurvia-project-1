@@ -21,7 +21,6 @@ export const metadata: Metadata = {
     "Business design and transformation coaching for founders, programme leads, and executives who need to move forward.",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
