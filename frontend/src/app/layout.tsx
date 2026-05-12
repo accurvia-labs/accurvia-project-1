@@ -1,0 +1,38 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import { Playfair_Display, Montserrat } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700"],
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["400", "500", "600", "700"],
+});
+
+export const metadata: Metadata = {
+  title: "Dare Oduale | Business Design & Transformation Coaching",
+  description:
+    "Business design and transformation coaching for founders, programme leads, and executives who need to move forward.",
+};
+
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${playfair.variable} ${montserrat.variable} antialiased`}
+    >
+      <body className="antialiased flex flex-col min-h-screen">{children}</body>
+    </html>
+  );
+}
