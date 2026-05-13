@@ -1,4 +1,6 @@
+import { HeroSection } from "@/components/homepage/HeroSection";
 import { NavBar } from "@/components/navigation/NavBar";
+
 
 export const metadata = {
   title: "Dare Oduale | Business Design & Transformation Coaching",
@@ -14,11 +16,13 @@ export const metadata = {
   },
 };
 
-
 export default function HomePage() {
   return (
     <>
       <NavBar />
+      <main role="main">
+        <HeroSection />
+      </main>
     </>
   );
 }
