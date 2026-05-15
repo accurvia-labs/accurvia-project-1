@@ -54,10 +54,10 @@
 
   --primary: #2D4D35;
   --primary-foreground: #FFFFFF;
-
+  
   --secondary: #D4A84A;
   --secondary-foreground: #FFFFFF;
-
+  
   --muted: #97B59A;
 
 
@@ -155,5 +155,4 @@
   html {
     @apply font-montserrat;
   }
-  
 }
