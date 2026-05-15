@@ -52,20 +52,22 @@
   --background: #FFFFFF;
   --foreground: #000000;
 
-  --card: #FFFFFF;
-  --card-foreground: #000000;
-
-  --popover: #FFFFFF;
-  --popover-foreground: #000000;
-
   --primary: #2D4D35;
   --primary-foreground: #FFFFFF;
 
   --secondary: #D4A84A;
   --secondary-foreground: #FFFFFF;
 
-  --muted: #F5F5F5;
+  --muted: #97B59A;
+
+
   --muted-foreground: #121212BF;
+
+  --card: #FFFFFF;
+  --card-foreground: #000000;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #000000;
 
   --accent: #D4A84A;
   --accent-foreground: #FFFFFF;
