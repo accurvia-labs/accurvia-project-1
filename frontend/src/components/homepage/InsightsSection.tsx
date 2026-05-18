@@ -48,10 +48,7 @@ const insights: Insight[] = [
 
 export function InsightsSection() {
   return (
-    <section
-      className="w-full bg-warm-white"
-      aria-labelledby="insights-heading"
-    >
+    <section className="w-full" aria-labelledby="insights-heading">
       <div className="px-6 md:px-14 py-6 md:py-8">
         {/* Section Header */}
         <div className="mb-16 text-center">
@@ -67,7 +64,7 @@ export function InsightsSection() {
         </div>
 
         {/* Insights Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {insights.map((insight) => (
             <InsightCard
               key={insight.id}

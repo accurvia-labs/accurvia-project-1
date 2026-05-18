@@ -25,7 +25,7 @@ export function NavBar() {
 
   return (
     <nav
-      className="w-full sticky top-0 z-50 border-b border-gray-300 bg-white backdrop-blur-sm bg-opacity-90"
+      className="w-full sticky top-0 z-50 border-b bg-background backdrop-blur-sm bg-opacity-90"
       aria-label="Main navigation"
     >
       <div className="max-w-8xl mx-auto px-6 md:px-14 py-6 md:py-6 flex items-center justify-between">

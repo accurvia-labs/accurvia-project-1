@@ -9,13 +9,12 @@ interface InsightCardProps {
   description: string;
   readTime: string;
   publishDate: string;
-  variant?: "primary" | "secondary" | "default";
+  variant?: "primary" | "secondary";
 }
 
 const BADGE_VARIANTS = {
-  primary: "bg-primary text-white shadow-md shadow-primary/20",
-  secondary: "bg-secondary text-white shadow-md shadow-secondary/20",
-  default: "bg-gray-100 text-slate-900 shadow-md shadow-gray-200/10",
+  primary: "bg-primary text-primary-foreground shadow-md shadow-primary/20",
+  secondary: "bg-secondary text-secondary-foreground shadow-md shadow-secondary/20",
 } as const;
 
 export function InsightCard({
@@ -24,11 +23,11 @@ export function InsightCard({
   description,
   readTime,
   publishDate,
-  variant = "default",
+  variant = "primary",
 }: InsightCardProps) {
   return (
     <Card
-      className={`flex flex-col h-full border-l-4 border-l-primary hover:shadow-xl transition-all duration-300 bg-white rounded-lg`}
+      className={`flex flex-col h-full border-l-4 border-l-primary hover:shadow-xl transition-all duration-300 bg-background rounded-lg`}
     >
       <CardHeader className="pb-2">
         <div className="flex flex-wrap gap-2">
@@ -51,17 +50,17 @@ export function InsightCard({
           {description}
         </p>
 
-        <div className="flex justify-between border-t">
-          <div className="flex items-center gap-1 text-xs text-gray-500 pb-4 uppercase tracking-wide">
+        <div className="flex justify-between border-t pt-2">
+          <div className="flex items-center gap-1 text-xs text-primary-foreground/60 uppercase tracking-wide">
             <span>{readTime}</span>
-            <span className="w-1 h-1 bg-gray-500 rounded-full"></span>
+            <span className="w-1 h-1 bg-primary-foreground/60 rounded-full"></span>
             <span>{publishDate}</span>
           </div>
 
           {/* Read Link */}
           <Link
             href="#"
-            className="group mt-4 text-xs font-bold text-secondary hover:text-secondary/80 transition-colors duration-200 inline-flex items-center gap-1"
+            className="group text-xs font-bold text-secondary hover:text-secondary/80 transition-colors duration-200 flex items-center gap-1"
           >
             Read
             <span>

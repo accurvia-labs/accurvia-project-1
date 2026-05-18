@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/homepage/HeroSection";
 import { AboutSection } from "@/components/homepage/AboutSection";
 import { WhatWeDoSection } from "@/components/homepage/WhatWeDoSection";
 import { InsightsSection } from "@/components/homepage/InsightsSection";
-
+import { Footer } from "@/components/footer/Footer";
 
 export const metadata = {
   title: "Dare Oduale | Business Design & Transformation Coaching",

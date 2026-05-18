@@ -32,9 +32,9 @@ export function OfferingCard({
       <div
         className={`flex flex-col pt-4 ${
           isPrimary
-            ? "bg-primary text-white"
+            ? "bg-primary text-primary-foreground"
             : isSecondary
-              ? "bg-secondary text-white"
+              ? "bg-secondary text-secondary-foreground"
               : "bg-muted text-primary"
         }`}
       >
