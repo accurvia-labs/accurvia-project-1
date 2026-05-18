@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Playfair_Display, Montserrat } from "next/font/google";
-import { cn } from "@/lib/utils";
+import { Playfair_Display, Montserrat, Inter } from "next/font/google";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -12,6 +11,12 @@ const playfair = Playfair_Display({
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
+  weight: ["400", "500", "600", "700"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
   weight: ["400", "500", "600", "700"],
 });
 
@@ -29,7 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${montserrat.variable} antialiased`}
+      className={`${playfair.variable} ${montserrat.variable} ${inter.variable} antialiased`}
     >
       <body className="antialiased flex flex-col min-h-screen">{children}</body>
     </html>
