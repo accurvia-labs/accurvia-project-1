@@ -36,17 +36,17 @@ export function HeroSection() {
         </div>
 
         {/* Image Placeholder */}
-        <div className="relative w-full flex-1">
-          <div className=" overflow-hidden rounded-2xl shadow-5xl bg-muted ">
-            <div className="relative shadow-4xl  w-full aspect-4/5  origin-top-left rotate-25 translate-y-10 hover:rotate-0 hover:translate-y-0 hover:translate-x-0 transition-all duration-700 ease-in-out">
+        <div className="relative w-full flex-1 shadow-2xl shadow-foreground rounded-2xl overflow-hidden">
+          <div className="rounded-2xl bg-muted overflow-hidden">
+            <div className="relative filter drop-shadow-2xl drop-shadow-foreground w-full aspect-4/5 origin-top-left rotate-25 translate-y-10 hover:rotate-0 hover:translate-y-0 hover:translate-x-0 transition-all duration-700 ease-in-out">
               <Image
-                src="/image.png"
+                src="/dare-oduale.jpg"
                 alt="Dare Oduale portrait"
                 fill
                 priority
                 className="
               object-cover
-              shadow-5xl
+              w-full h-full
               rounded-2xl
               "
               />

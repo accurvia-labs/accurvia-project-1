@@ -54,14 +54,12 @@
 
   --primary: #2D4D35;
   --primary-foreground: #FFFFFF;
-  
+
   --secondary: #D4A84A;
   --secondary-foreground: #FFFFFF;
-  
+
   --muted: #97B59A;
-
-
-  --muted-foreground: #121212BF;
+  --muted-foreground: #756031;
 
   --card: #FFFFFF;
   --card-foreground: #000000;
@@ -74,7 +72,7 @@
 
   --destructive: #DC2626;
 
-  --border: #E5E5E5;
+  --border: #F6F3F2;
   --input: #E5E5E5;
 
   --ring: #D4A84A;
