@@ -1,6 +1,12 @@
 "use client";
 
 import { OfferingCard } from "@/components/shared/OfferingCard";
+import Enggagement from "../../../public/images/Enggagement.png";
+import Team from "../../../public/images/team.png";
+import Group from "../../../public/images/group.png";
+
+import { StaticImageData } from "next/image";
+import { ArrowRight } from "lucide-react";
 
 interface Service {
   id: string;
@@ -8,7 +14,7 @@ interface Service {
   subtitle: string;
   steps: string[];
   serviceOffering: string;
-  image: string;
+  image: string | StaticImageData;
   imageAlt: string;
 }
 
@@ -20,7 +26,7 @@ const services: Service[] = [
       "Leadership & Digital Transformation Coaching for high-stakes decision makers.",
     steps: ["Diagnostic", "Structured Session", "Integration"],
     serviceOffering: "CORE OFFERING",
-    image: "/Enggagement.png",
+    image: Enggagement,
     imageAlt:
       "Professional one-on-one coaching session with hands together showing collaboration and engagement",
   },
@@ -31,7 +37,7 @@ const services: Service[] = [
       "Business Design Consulting to restructure workflows and strategy from the ground up.",
     steps: ["Discovery", "Business Design", "Build & Embed"],
     serviceOffering: "CORE OFFERING",
-    image: "/team.png",
+    image: Team,
     imageAlt:
       "Business team in modern office meeting room collaborating on strategy and workflow design",
   },
@@ -42,7 +48,7 @@ const services: Service[] = [
       "Agile Bootcamp & Team Training for groups looking to accelerate their execution speed.",
     steps: ["Pre-Cohort Intake", "Post-programme"],
     serviceOffering: "CORE OFFERING",
-    image: "/group.png",
+    image: Group,
     imageAlt:
       "Diverse team members working together in agile bootcamp training session on project execution",
   },
@@ -85,6 +91,19 @@ export function WhatWeDoSection() {
               imageAlt={service.imageAlt}
             />
           ))}
+        </div>
+
+        {/* Learn More Button */}
+        <div className="text-end">
+          <a
+            href="#"
+            className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:text-primary/80 transition-colors duration-200"
+          >
+            Learn More
+            <span>
+              <ArrowRight size={14} />
+            </span>
+          </a>
         </div>
       </div>
     </section>

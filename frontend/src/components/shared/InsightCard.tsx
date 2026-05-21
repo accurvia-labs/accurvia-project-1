@@ -14,7 +14,8 @@ interface InsightCardProps {
 
 const BADGE_VARIANTS = {
   primary: "bg-primary text-primary-foreground shadow-md shadow-primary/20",
-  secondary: "bg-secondary text-secondary-foreground shadow-md shadow-secondary/20",
+  secondary:
+    "bg-secondary text-secondary-foreground shadow-md shadow-secondary/20",
 } as const;
 
 export function InsightCard({

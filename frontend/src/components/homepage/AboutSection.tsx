@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export function AboutSection() {
   const categories = [
-    { label: "Career" },
-    { label: "Business" },
-    { label: "Ministry" },
+    { label: "Career", link: "/career" },
+    { label: "Business", link: "/business" },
+    { label: "Ministry", link: "/ministry" },
   ];
 
   return (
@@ -53,13 +53,14 @@ export function AboutSection() {
           {/* Category Badges */}
           <div className="flex flex-wrap gap-3 mt-6">
             {categories.map((cat) => (
-              <Badge
-                key={cat.label}
-                variant="outline"
-                className="font-inter px-4 py-2 h-8 text-xs font-bold uppercase tracking-[1.2px] text-secondary hover:bg-secondary/10 cursor-pointer transition-colors duration-300"
-              >
-                {cat.label}
-              </Badge>
+              <Link key={cat.label} href={cat.link}>
+                <Badge
+                  variant="outline"
+                  className="font-inter px-4 py-2 h-8 text-xs font-bold uppercase tracking-[1.2px] text-secondary hover:bg-secondary/10 cursor-pointer transition-colors duration-300"
+                >
+                  {cat.label}
+                </Badge>
+              </Link>
             ))}
           </div>
 
