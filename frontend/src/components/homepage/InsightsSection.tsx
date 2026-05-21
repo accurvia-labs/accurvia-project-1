@@ -9,7 +9,7 @@ interface Insight {
   description: string;
   readTime: string;
   publishDate: string;
-  variant?: "primary" | "secondary" | "default";
+  variant?: "primary" | "secondary";
 }
 
 const insights: Insight[] = [
