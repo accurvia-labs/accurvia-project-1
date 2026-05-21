@@ -19,6 +19,7 @@ export function NavBar() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Career", href: "/career" },
+    { label: "Business", href: "/business" },
     { label: "Ministry", href: "/ministry" },
     { label: "Insights", href: "/insights" },
   ];
