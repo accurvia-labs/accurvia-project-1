@@ -23,11 +23,10 @@ export function HeroSection() {
             id="hero-heading"
             className="text-3xl md:text-5xl font-bold leading-tight font-heading text-primary-foreground"
           >
-            THINKER • <br />
-            TEACHER • <br />
-            BUSINESS <br />
-            DESIGNER • <br />
-            COACH
+            I&apos;m Dare.
+            <span className="block text-xs font-medium tracking-wide">
+              THINKER • TEACHER • BUSINESS DESIGNER • COACH
+            </span>
           </h1>
 
           <p className="text-base md:text-lg leading-relaxed font-body text-muted">
@@ -52,11 +51,10 @@ export function HeroSection() {
             id="hero-heading"
             className="text-7xl font-bold mb-6 leading-tight font-heading text-primary-foreground"
           >
-            THINKER • <br />
-            TEACHER • <br />
-            BUSINESS <br />
-            DESIGNER • <br />
-            COACH
+            I&apos;m Dare.
+            <span className="block text-xs font-medium tracking-wide">
+              THINKER • TEACHER • BUSINESS DESIGNER • COACH
+            </span>
           </h1>
 
           {/* Hero Subheading */}
