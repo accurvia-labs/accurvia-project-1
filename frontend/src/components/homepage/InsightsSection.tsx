@@ -1,6 +1,9 @@
 "use client";
 
-import { InsightCard } from "@/components/shared/InsightCard";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { Plus } from "lucide-react";
 
 interface Insight {
   id: string;
@@ -11,6 +14,11 @@ interface Insight {
   publishDate: string;
   variant?: "primary" | "secondary";
 }
+
+const BADGE_VARIANTS: Record<string, string> = {
+  primary: "bg-primary text-white",
+  secondary: "bg-secondary text-white",
+};
 
 const insights: Insight[] = [
   {
@@ -66,15 +74,55 @@ export function InsightsSection() {
         {/* Insights Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {insights.map((insight) => (
-            <InsightCard
+            <Card
               key={insight.id}
-              category={insight.category}
-              title={insight.title}
-              description={insight.description}
-              readTime={insight.readTime}
-              publishDate={insight.publishDate}
-              variant={insight.variant}
-            />
+              className={`flex flex-col h-full border-l-4 border-l-primary hover:shadow-xl transition-all duration-300 bg-background rounded-lg`}
+            >
+              <CardHeader className="pb-2">
+                <div className="flex flex-wrap gap-2">
+                  {insight.category.split(",").map((category: string) => (
+                    <Badge
+                      key={category.trim()}
+                      variant="outline"
+                      className={`text-[10px] uppercase tracking-wide h-8 px-3 py-2 rounded-md border-0 ${BADGE_VARIANTS[insight.variant ?? "primary"]}`}
+                    >
+                      {category.trim()}
+                    </Badge>
+                  ))}
+                </div>
+                <h3 className="text-xl md:text-2xl font-semibold mt-4 leading-snug font-heading text-slate-900">
+                  {insight.title}
+                </h3>
+              </CardHeader>
+              <CardContent className="flex flex-col grow pt-2">
+                <p className="text-sm md:text-base mb-6 leading-relaxed grow">
+                  {insight.description}
+                </p>
+
+                <div className="flex justify-between border-t pt-2">
+                  <div className="flex items-center gap-1 text-xs text-primary/60 uppercase tracking-wide">
+                    <span>{insight.readTime}</span>
+                    <span className="w-1 h-1 bg-primary/60 rounded-full"></span>
+                    <span>{insight.publishDate}</span>
+                  </div>
+
+                  {/* Read Link */}
+                  <Link
+                    href="#"
+                    className="group text-xs font-bold text-secondary hover:text-secondary/80 transition-colors duration-200 flex items-center gap-1"
+                  >
+                    Read
+                    <span>
+                      <Plus
+                        size={20}
+                        strokeWidth={3}
+                        className="group-hover:rotate-90 transition-transform duration-300"
+                      />
+                    </span>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

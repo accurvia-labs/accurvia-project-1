@@ -1,7 +1,8 @@
 "use client";
 
 import { ReactNode } from "react";
-import { CareerAchievementCard } from "@/components/shared/CareerAchievementCard";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+
 import { Globe, Users, House, Zap } from "lucide-react";
 
 interface Achievement {
@@ -10,7 +11,7 @@ interface Achievement {
   desc: string;
 }
 
-const ACHIEVEMENTS: Achievement[] = [
+const achievements: Achievement[] = [
   {
     icon: <Globe size={30} color="var(--foreground)" />,
     title: "120 Countries Playbook",
@@ -34,7 +35,6 @@ const ACHIEVEMENTS: Achievement[] = [
 ];
 
 export function KeyAchievements() {
-  const achievements = ACHIEVEMENTS;
   return (
     <section className="bg-border" aria-labelledby="key-achievements-heading">
       <div className="px-6 py-12 md:px-14 md:py-18 mx-auto">
@@ -51,12 +51,20 @@ export function KeyAchievements() {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-8 mt-16">
           {achievements.map((achievement, index) => (
-            <CareerAchievementCard
+            <Card
               key={index}
-              icon={achievement.icon}
-              title={achievement.title}
-              description={achievement.desc}
-            />
+              className="p-6 md:p- bg-background border  rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+            >
+              <CardHeader>
+                <span>{achievement.icon}</span>
+                <p className="text-md md:text-lg font-semibold tracking-[-0.02em] leading-[1.32] mt-6">
+                  {achievement.title}
+                </p>
+              </CardHeader>
+              <CardContent className="text-foreground/60 text-xs leading-[1.65]">
+                {achievement.desc}
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

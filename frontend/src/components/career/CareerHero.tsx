@@ -86,7 +86,7 @@ export function CareerHero() {
             </div>
 
             {/* Heading */}
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-[0.98] tracking-[-0.04em] text-primary">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold leading-[0.98] tracking-[-0.04em] text-primary">
               Fifteen years of making teams — and the people in them — genuinely
               better.
             </h1>
@@ -113,8 +113,8 @@ export function CareerHero() {
 
 {/* Stats Section */}
       <div className="bg-primary" aria-labelledby="stats-heading">
-        <div className="px-6 py-12 md:py-16 lg:py-18 mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
+        <div className="px-6 py-12 md:py-16 lg:py-18 mx-auto mt-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map(({ num, label }, i) => (
               <div
                 key={label}
