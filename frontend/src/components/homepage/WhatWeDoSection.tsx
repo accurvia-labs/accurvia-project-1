@@ -19,7 +19,7 @@ interface Service {
 
 const services: Service[] = [
   {
-    id: "team-organization",
+    id: "id-1",
     title: "Team & Organization",
     subtitle:
       "Business Design Consulting to restructure workflows and strategy from the ground up.",
@@ -30,7 +30,7 @@ const services: Service[] = [
       "Business team in modern office meeting room collaborating on strategy and workflow design",
   },
   {
-    id: "clerity-architects",
+    id: "id-2",
     title: "Clerity Architects",
     subtitle:
       "Leadership & Digital Transformation Coaching for high-stakes decision makers.",
@@ -42,7 +42,7 @@ const services: Service[] = [
   },
 
   {
-    id: "steward",
+    id: "id-3",
     title: "Steward",
     subtitle:
       "Agile Bootcamp & Team Training for groups looking to accelerate their execution speed.",
@@ -81,7 +81,6 @@ export function WhatWeDoSection() {
               { id, title, subtitle, steps, serviceOffering, image, imageAlt },
               idx,
             ) => {
-              const isPrimary = idx === 0;
               const isSecondary = idx === 1;
 
               return (
@@ -92,11 +91,9 @@ export function WhatWeDoSection() {
                   {/* Header  */}
                   <div
                     className={`flex flex-col pt-4 ${
-                      isPrimary
-                        ? "bg-primary text-primary-foreground"
-                        : isSecondary
-                          ? "bg-secondary text-secondary-foreground"
-                          : "bg-muted text-primary"
+                      isSecondary
+                        ? "bg-secondary text-secondary-foreground"
+                        : "bg-primary text-primary-foreground"
                     }`}
                   >
                     {/* Header with Title */}
@@ -118,9 +115,9 @@ export function WhatWeDoSection() {
                             key={step}
                             variant="outline"
                             className={`text-[10px] uppercase tracking-wide h-8 px-3 py-2 rounded-md ${
-                              isPrimary
-                                ? "bg-primary/10 text-primary-foreground border-primary/30 shadow-md shadow-secondary/40"
-                                : "bg-secondary/10 text-muted-foreground border-secondary/30 shadow-md shadow-primary/80"
+                              isSecondary
+                                ? "bg-secondary/10 text-muted-foreground border-secondary/30 shadow-md shadow-primary/80"
+                                : "bg-primary/10 text-primary-foreground border-primary/30 shadow-md shadow-secondary/40"
                             }`}
                           >
                             {step}
