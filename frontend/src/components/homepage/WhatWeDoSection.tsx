@@ -6,7 +6,6 @@ import Team from "../../../public/images/team.png";
 import Group from "../../../public/images/group.png";
 
 import { StaticImageData } from "next/image";
-import { ArrowRight } from "lucide-react";
 
 interface Service {
   id: string;
@@ -20,17 +19,6 @@ interface Service {
 
 const services: Service[] = [
   {
-    id: "1-1-engagement",
-    title: "1:1 Engagement",
-    subtitle:
-      "Leadership & Digital Transformation Coaching for high-stakes decision makers.",
-    steps: ["Diagnostic", "Structured Session", "Integration"],
-    serviceOffering: "CORE OFFERING",
-    image: Enggagement,
-    imageAlt:
-      "Professional one-on-one coaching session with hands together showing collaboration and engagement",
-  },
-  {
     id: "team-organization",
     title: "Team & Organization",
     subtitle:
@@ -42,11 +30,23 @@ const services: Service[] = [
       "Business team in modern office meeting room collaborating on strategy and workflow design",
   },
   {
-    id: "group-format",
-    title: "Group Format",
+    id: "clerity-architects",
+    title: "Clerity Architects",
+    subtitle:
+      "Leadership & Digital Transformation Coaching for high-stakes decision makers.",
+    steps: ["Diagnostic", "Structured Session", "Integration"],
+    serviceOffering: "CORE OFFERING",
+    image: Enggagement,
+    imageAlt:
+      "Professional one-on-one coaching session with hands together showing collaboration and engagement",
+  },
+
+  {
+    id: "steward",
+    title: "Steward",
     subtitle:
       "Agile Bootcamp & Team Training for groups looking to accelerate their execution speed.",
-    steps: ["Pre-Cohort Intake", "Post-programme"],
+    steps: ["Discipleship", "Leadership", "Community"],
     serviceOffering: "CORE OFFERING",
     image: Group,
     imageAlt:
@@ -61,7 +61,7 @@ export function WhatWeDoSection() {
         {/* Section Header */}
         <div className="mb-18 text-center">
           <p className="font-inter text-xs font-bold tracking-[1.5px] uppercase text-secondary mb-4">
-            What We Do
+            Areas of Focus
           </p>
           <h2 className="text-2xl md:text-3xl font-semibold">
             Three Formats, One goal:
@@ -84,26 +84,13 @@ export function WhatWeDoSection() {
               steps={service.steps}
               serviceOffering={service.serviceOffering}
               isPrimary={
-                service.id === "1-1-engagement" || service.id === "group-format"
+                service.id === "team-organization" || service.id === "steward"
               }
-              isSecondary={service.id === "team-organization"}
+              isSecondary={service.id === "clerity-architects"}
               image={service.image}
               imageAlt={service.imageAlt}
             />
           ))}
-        </div>
-
-        {/* Learn More Button */}
-        <div className="text-end">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:text-primary/80 transition-colors duration-200"
-          >
-            Learn More
-            <span>
-              <ArrowRight size={14} />
-            </span>
-          </a>
         </div>
       </div>
     </section>
