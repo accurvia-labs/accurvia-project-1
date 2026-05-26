@@ -2,6 +2,7 @@ import { HeroSection } from "@/components/homepage/HeroSection";
 import { AboutSection } from "@/components/homepage/AboutSection";
 import { WhatWeDoSection } from "@/components/homepage/WhatWeDoSection";
 import { InsightsSection } from "@/components/homepage/InsightsSection";
+import { BookCallCTA } from "@/components/homepage/BookCallCTA";
 
 export const metadata = {
   title: "Dare Oduale | Business Design & Transformation Coaching",
@@ -23,6 +24,7 @@ export default function HomePage() {
       <HeroSection />
       <AboutSection />
       <WhatWeDoSection />
+      <BookCallCTA />
       <InsightsSection />
     </>
   );

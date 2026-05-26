@@ -44,7 +44,7 @@ export function NavBar() {
             <Link
               key={link.label}
               href={link.href}
-              className={`text-lg font-medium transition-all text-primary hover:underline hover:underline-offset-4 decoration-2 ${
+              className={`text-lg font-medium transition-all text-primary hover:underline-offset-4 decoration-2 hover:underline hover:text-secondary ${
                 pathname === link.href
                   ? "underline underline-offset-4 decoration-2"
                   : ""
@@ -76,7 +76,7 @@ export function NavBar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`block text-sm font-medium transition-all text-primary hover:underline hover:underline-offset-4 decoration-2 ${
+                  className={`block text-sm font-medium transition-all text-primary hover:underline hover:underline-offset-4 decoration-2 hover:text-secondary ${
                     pathname === link.href
                       ? "underline underline-offset-4 decoration-2"
                       : ""
