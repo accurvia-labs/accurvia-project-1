@@ -21,11 +21,11 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
-      <AboutSection />
-      <WhatWeDoSection />
-      <BookCallCTA />
-      <InsightsSection />
+        <HeroSection />
+        <AboutSection />
+        <WhatWeDoSection />
+        <BookCallCTA />
+        <InsightsSection />
     </>
   );
 }

@@ -4,6 +4,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import { NavBar } from "@/components/navigation/NavBar";
 import { Footer } from "@/components/footer/Footer";
 
+
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-heading",
@@ -34,7 +35,9 @@ export default function RootLayout({
     >
       <body className="antialiased flex flex-col min-h-screen">
         <NavBar />
-        <main role="main">{children}</main>
+        <main role="main">
+        {children}
+        </main>
         <Footer />
       </body>
     </html>

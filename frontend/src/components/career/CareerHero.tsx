@@ -3,10 +3,10 @@
 import Image from "next/image";
 import careerHeroImage from "../../../public/images/career-hero.png";
 import dareOdualePortrait from "../../../public/images/dare-oduale.png";
-
 import { ArrowRight } from "lucide-react";
 import { Badge } from "../ui/badge";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface Stat {
   num: string;
@@ -24,15 +24,18 @@ export function CareerHero() {
   const stats = STATS;
   return (
     <section
-      className="relative overflow-hidden bg-card"
+      className="overflow-hidden bg-card"
       aria-labelledby="career-hero-heading"
     >
       {/* Hero Section */}
-      <div className="px-6 py-12 md:px-14 md:py-18 mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start justify-center">
-          <div className="relative w-full hidden lg:block">
+      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start justify-center">
+          {/* Left — Images */}
+          <div className="flex-1 relative w-full">
+            {/* Main hero image */}
             <div
-              className="absolute top-0 left-0 w-122.5 h-125 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 filter drop-shadow-xl"
+             
+              className="relative w-full h-64 sm:h-96 md:h-120 lg:h-140 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 drop-shadow-xl"
               aria-hidden="true"
             >
               <Image
@@ -40,81 +43,96 @@ export function CareerHero() {
                 alt="Career hero visual representation"
                 fill
                 priority
-                className="
-              object-cover
-              w-full h-full
-              rounded-2xl
-              "
+                className="object-cover rounded-2xl"
               />
             </div>
 
-            {/* Portrait */}
-            <div className="absolute left-64 top-57 w-79 h-80 rounded-2xl border-8 overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center hover:scale-105 transition-transform duration-300 filter drop-shadow-xl">
-                <Image
-                  src={dareOdualePortrait}
-                  alt="Dare Oduale portrait"
-                  fill
-                  priority
-                  className="
-              object-cover
-              w-full h-full
-              rounded-2xl
-              "
-                />
-              </div>
-            </div>
-
-            {/* Badge */}
-            <Badge className="absolute left-104 top-12 w-40 h-32 p-6 bg-primary rounded-lg shadow-md text-primary-foreground flex flex-col justify-center items-center font-inter animate-pulse hover:animate-none">
-              <p className="text-3xl font-semibold leading-none text-center">
+            {/* overlaps top-right */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{
+                duration: 3.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1,
+              }}
+              className="absolute top-6 -right-3 sm:top-10 sm:-right-6 lg:top-14 lg:-right-14 w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-32 p-3 sm:p-4 lg:p-6 bg-primary rounded-lg shadow-md text-primary-foreground flex flex-col justify-center items-center"
+            >
+              <p className="text-lg sm:text-2xl lg:text-3xl font-semibold leading-none text-center">
                 15+
               </p>
-              <p className="text-[10px] font-light tracking-widest uppercase leading-tight mt-2 text-center">
+              <p className="text-[8px] sm:text-[9px] lg:text-[10px] font-light tracking-widest uppercase leading-tight mt-1 sm:mt-2 text-center">
                 Years of Excellence
               </p>
-            </Badge>
+            </motion.div>
+
+            {/* Portrait — overlaps bottom-right of hero image */}
+            <motion.div
+              animate={{ y: [0, 80, 0] }}
+              transition={{
+                duration: 3.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 2,
+              }}
+              className="absolute -bottom-10 -right-3 sm:-bottom-16 sm:-right-6 lg:-bottom-14 lg:-right-14 w-28 h-32 sm:w-48 sm:h-52 md:w-64 md:h-72 lg:w-69 lg:h-70 rounded-2xl border-4 sm:border-8 border-card overflow-hidden hover:scale-105 transition-transform duration-300 drop-shadow-xl"
+              aria-hidden="true"
+            >
+              <Image
+                src={dareOdualePortrait}
+                alt="Dare Oduale portrait"
+                fill
+                priority
+                className="object-cover rounded-2xl"
+              />
+            </motion.div>
           </div>
 
-          {/* Right Content */}
-          <div className="flex flex-col gap-6 lg:gap-8">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-0.5 bg-primary" />
-              <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-primary">
-                Senior Apple Architect
+          {/* Right — Content */}
+          <div className="flex-1 w-full mt-6 sm:mt-10 lg:mt-0">
+            <div className="flex flex-col gap-5 lg:gap-8">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-0.5 bg-primary" />
+                <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-primary">
+                  Senior Apple Architect
+                </p>
+              </div>
+
+              {/* Heading */}
+              <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.05] tracking-[-0.04em] text-primary">
+                Fifteen years of making teams — and the people in them —
+                genuinely better.
+              </h1>
+
+              {/* Description */}
+              <p className="text-sm sm:text-base md:text-lg leading-[1.55] text-foreground/60">
+                A career defined by human-centric strategy and high-stakes
+                transformation across the globe&apos;s most demanding
+                industries.
               </p>
-            </div>
 
-            {/* Heading */}
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold leading-[0.98] tracking-[-0.04em] text-primary">
-              Fifteen years of making teams — and the people in them — genuinely
-              better.
-            </h1>
-
-            {/* Description */}
-            <p className="text-base md:text-lg leading-[1.55] text-foreground/60">
-              A career defined by human-centric strategy and high-stakes
-              transformation across the globe&aqos;s most demanding industries.
-            </p>
-
-            {/* CTA */}
-            <div className="pt-2">
-              <Link
-                href="#"
-                className="inline-flex items-center gap-2.5 h-13 px-10 py-4 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.14em] uppercase rounded-full hover:bg-primary/80 transition-all duration-200"
-              >
-                Explore the Journey
-                <ArrowRight size={14} />
-              </Link>
+              {/* CTA */}
+              <div className="pt-1 sm:pt-2">
+                <Link
+                  href="#"
+                  className="inline-flex items-center gap-2.5 px-8 sm:px-10 py-3.5 sm:py-4 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.14em] uppercase rounded-full hover:bg-primary/80 transition-all duration-200"
+                >
+                  Explore the Journey
+                  <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-{/* Stats Section */}
-      <div className="bg-primary" aria-labelledby="stats-heading">
-        <div className="px-6 py-12 md:py-16 lg:py-18 mx-auto mt-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      {/* Stats Section */}
+      <div
+        className="bg-primary mt-16 sm:mt-20 lg:mt-24"
+        aria-labelledby="stats-heading"
+      >
+        <div className="px-6 sm:px-10 md:px-14 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-6">
             {stats.map(({ num, label }, i) => (
               <div
                 key={label}
@@ -122,10 +140,10 @@ export function CareerHero() {
                   i > 0 ? "md:border-l md:border-border/20" : ""
                 }`}
               >
-                <h1 className="text-3xl md:text-4xl font-bold text-primary-foreground leading-none">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground leading-none">
                   {num}
-                </h1>
-                <span className="text-primary-foreground/60 text-[10px] tracking-[2px] uppercase leading-wider text-center">
+                </h2>
+                <span className="text-primary-foreground/60 text-[9px] sm:text-[10px] tracking-[2px] uppercase leading-wider text-center">
                   {label}
                 </span>
               </div>
