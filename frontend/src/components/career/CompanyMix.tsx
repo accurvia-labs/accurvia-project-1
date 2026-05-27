@@ -20,7 +20,6 @@ import logoShell from "../../../public/images/shell.png";
 import skipton from "../../../public/images/skipton.png";
 import logoVenturesPlatform from "../../../public/images/ventures-platform.png";
 
-
 interface Company {
   name: string;
   src: StaticImageData;
@@ -45,29 +44,37 @@ const COMPANIES: Company[] = [
   { name: "Ventures Platform", src: logoVenturesPlatform },
 ];
 
+const caption =
+  "This is a mix of companies I have worked for and clients I have had.";
+
 export function CompanyMix() {
-  const companies = COMPANIES;
-  const caption = "This is a mix of companies I have worked for and clients I have had.";
   return (
     <>
       <style>{`
         @keyframes ticker {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
-        
+
         .company-mix__track {
-          animation: ticker 48s linear infinite;
+          animation: ticker 40s linear infinite;
         }
-        
+
         .company-mix__track:hover {
           animation-play-state: paused;
         }
-        
+
+        .company-mix__viewport {
+          mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+          -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+        }
+
+        @media (max-width: 640px) {
+          .company-mix__track {
+            animation-duration: 28s;
+          }
+        }
+
         @media (prefers-reduced-motion: reduce) {
           .company-mix__track {
             animation: none;
@@ -76,28 +83,22 @@ export function CompanyMix() {
       `}</style>
 
       <section
-        className="border-t border-b overflow-hidden"
+        className="border-t border-b overflow-hidden py-2 sm:py-0"
         aria-label="Companies and clients"
       >
         {/* Carousel Viewport */}
-        <div className="h-28 overflow-hidden mask-image-gradient">
-          <style>{`
-            .mask-image-gradient {
-              mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
-              -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
-            }
-          `}</style>
-          <div className="company-mix__track flex items-center gap-14 w-max p-7">
-            {[...companies, ...companies].map(({ name, src }, index) => (
+        <div className="company-mix__viewport h-20 sm:h-24 md:h-28 overflow-hidden">
+          <div className="company-mix__track flex items-center gap-8 sm:gap-10 md:gap-14 w-max px-4 sm:px-6 md:px-7 h-full">
+            {[...COMPANIES, ...COMPANIES].map(({ name, src }, index) => (
               <span
                 key={`${name}-${index}`}
-                className="shrink-0 flex items-center justify-center w-30 h-16"
+                className="shrink-0 flex items-center justify-center w-20 sm:w-24 md:w-28 h-10 sm:h-12 md:h-14"
                 title={name}
               >
                 <Image
                   src={src}
                   alt={name}
-                  className="w-auto h-auto object-contain"
+                  className="w-auto h-auto max-h-10 sm:max-h-12 object-contain"
                   loading="lazy"
                 />
               </span>
@@ -107,7 +108,7 @@ export function CompanyMix() {
 
         {/* Caption */}
         {caption && (
-          <p className="mb-8 text-xs leading-[1.4] text-center mt-4">
+          <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed text-center px-6 mt-3 sm:mt-4 mb-4 sm:mb-6 md:mb-8">
             {caption}
           </p>
         )}

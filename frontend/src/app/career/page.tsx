@@ -9,13 +9,13 @@ import { CareerCTA } from "@/components/career/CareerCTA";
 export default function CareerPage() {
   return (
     <>
-        <CareerHero />
-        <CareerJourney />
-        <KeyAchievements />
-        <Philosophy />
-        <CompanyMix />
-        <Experiences />
-        <CareerCTA />
+      <CareerHero />
+      <CareerJourney />
+      <KeyAchievements />
+      <Philosophy />
+      <CompanyMix />
+      <Experiences />
+      <CareerCTA />
     </>
   );
 }

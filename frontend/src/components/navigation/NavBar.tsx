@@ -26,25 +26,25 @@ export function NavBar() {
 
   return (
     <nav
-      className="w-full sticky top-0 z-50 border-b bg-background backdrop-blur-sm bg-opacity-90"
+      className="w-full sticky top-0 z-50 border-b bg-background/90 backdrop-blur-sm"
       aria-label="Main navigation"
     >
-      <div className="max-w-8xl mx-auto px-6 md:px-14 py-6 md:py-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-14 py-4 sm:py-5 md:py-6 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
-          className="text-lg sm:text-2xl md:text-xl font-bold font-heading text-primary"
+          className="text-xl sm:text-2xl font-bold font-heading text-primary shrink-0"
         >
           Dare Oduale
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-8">
+        {/* Desktop Nav Links */}
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className={`text-lg font-medium transition-all text-primary hover:underline-offset-4 decoration-2 hover:underline hover:text-secondary ${
+              className={`text-sm xl:text-base font-medium transition-all text-primary hover:underline hover:underline-offset-4 decoration-2 hover:text-secondary ${
                 pathname === link.href
                   ? "underline underline-offset-4 decoration-2"
                   : ""
@@ -55,41 +55,60 @@ export function NavBar() {
           ))}
         </div>
 
-        {/* CTA Button - Desktop */}
+        {/* CTA Button — Desktop */}
         <Button
           variant="default"
-          className="hidden px-8 py-4 font-bold h-12 rounded-md lg:flex hover:bg-primary/90"
+          className="hidden lg:flex px-6 xl:px-8 py-3 font-bold h-11 xl:h-12 rounded-md hover:bg-primary/90 text-sm shrink-0"
           aria-label="Book a strategy call"
         >
           Book a Strategy Call
         </Button>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Trigger */}
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-          <SheetTrigger className="lg:hidden">
-            <Menu className="h-6 w-6 text-primary cursor-pointer" />
+          <SheetTrigger
+            className="lg:hidden p-1 rounded-md hover:bg-border transition-colors"
+            aria-label="Open navigation menu"
+          >
+            <Menu className="h-6 w-6 text-primary" />
           </SheetTrigger>
-          <SheetContent side="right" className="bg-background p-6">
+
+          <SheetContent side="right" className="bg-background w-72 sm:w-80 p-0">
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-            <div className="space-y-4 pt-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className={`block text-sm font-medium transition-all text-primary hover:underline hover:underline-offset-4 decoration-2 hover:text-secondary ${
-                    pathname === link.href
-                      ? "underline underline-offset-4 decoration-2"
-                      : ""
-                  }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+
+            <div className="flex flex-col h-full px-6 pt-10 pb-8">
+              {/* Mobile Logo */}
+              <Link
+                href="/"
+                className="text-xl font-bold font-heading text-primary mb-8"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Dare Oduale
+              </Link>
+
+              {/* Mobile Nav Links */}
+              <nav className="flex flex-col gap-1 flex-1">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className={`px-3 py-3 text-base font-medium rounded-md transition-all text-primary hover:bg-border hover:text-secondary ${
+                      pathname === link.href
+                        ? "bg-border underline underline-offset-4 decoration-2"
+                        : ""
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+
+              {/* Mobile CTA */}
               <Button
-                className="w-full px-4 py-2 font-bold h-9 rounded-lg"
+                className="w-full font-bold h-11 rounded-md mt-6"
                 variant="default"
-                // onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Book a Strategy Call
               </Button>

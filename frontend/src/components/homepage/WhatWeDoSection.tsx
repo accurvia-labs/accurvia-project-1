@@ -19,7 +19,7 @@ interface Service {
 
 const services: Service[] = [
   {
-    id: "id-1",
+    id: "1",
     title: "Team & Organization",
     subtitle:
       "Business Design Consulting to restructure workflows and strategy from the ground up.",
@@ -30,7 +30,7 @@ const services: Service[] = [
       "Business team in modern office meeting room collaborating on strategy and workflow design",
   },
   {
-    id: "id-2",
+    id: "2",
     title: "Clerity Architects",
     subtitle:
       "Leadership & Digital Transformation Coaching for high-stakes decision makers.",
@@ -40,9 +40,8 @@ const services: Service[] = [
     imageAlt:
       "Professional one-on-one coaching session with hands together showing collaboration and engagement",
   },
-
   {
-    id: "id-3",
+    id: "3",
     title: "Steward",
     subtitle:
       "Agile Bootcamp & Team Training for groups looking to accelerate their execution speed.",
@@ -54,28 +53,61 @@ const services: Service[] = [
   },
 ];
 
+function ServiceImage({
+  image,
+  imageAlt,
+}: {
+  image: string | StaticImageData;
+  imageAlt: string;
+}) {
+  if (!image) return null;
+
+  if (
+    typeof image === "string" ||
+    (typeof image === "object" && "src" in image)
+  ) {
+    return (
+      <div className="relative w-full h-52 sm:h-60 md:h-64 lg:h-72 bg-gray-200 overflow-hidden">
+        <Image
+          src={image as StaticImageData}
+          alt={imageAlt || ""}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          fill
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full h-52 sm:h-60 md:h-64 lg:h-72 bg-gray-200 overflow-hidden flex items-center justify-center">
+      {image}
+    </div>
+  );
+}
+
 export function WhatWeDoSection() {
   return (
     <section className="w-full bg-border" aria-labelledby="what-we-do-heading">
-      <div className="px-6 py-12 md:px-14 md:py-18 mx-auto">
+      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
         {/* Section Header */}
-        <div className="mb-18 text-center">
-          <p className="font-inter text-xs font-bold tracking-[1.5px] uppercase text-secondary mb-4">
+        <div className="mb-10 sm:mb-14 md:mb-16 text-center">
+          <p className="font-inter text-xs font-bold tracking-[1.5px] uppercase text-secondary mb-3 sm:mb-4">
             Areas of Focus
           </p>
-          <h2 className="text-2xl md:text-3xl font-semibold">
+          <h2 className="text-2xl sm:text-3xl font-semibold">
             Three Formats, One goal:
           </h2>
           <span
             id="what-we-do-heading"
-            className="text-2xl md:text-3xl font-bold font-heading"
+            className="text-2xl sm:text-3xl font-bold font-heading"
           >
             GROWTH AND HAPPINESS
           </span>
         </div>
 
         {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8">
           {services.map(
             (
               { id, title, subtitle, steps, serviceOffering, image, imageAlt },
@@ -86,9 +118,9 @@ export function WhatWeDoSection() {
               return (
                 <Card
                   key={id}
-                  className={`flex flex-col h-full transition-transform duration-300 hover:scale-105 overflow-hidden filter drop-shadow-xl border-0 py-0 gap-0`}
+                  className="flex flex-col h-full transition-transform duration-300 hover:scale-105 overflow-hidden drop-shadow-xl border-0 py-0 gap-0"
                 >
-                  {/* Header  */}
+                  {/* Card Header */}
                   <div
                     className={`flex flex-col pt-4 ${
                       isSecondary
@@ -96,10 +128,9 @@ export function WhatWeDoSection() {
                         : "bg-primary text-primary-foreground"
                     }`}
                   >
-                    {/* Header with Title */}
                     <CardHeader className="pb-4">
                       <h3
-                        className={`text-lg md:text-2xl font-bold mb-2 font-heading ${
+                        className={`text-lg sm:text-xl md:text-2xl font-bold mb-2 font-heading ${
                           isSecondary
                             ? "text-muted-foreground"
                             : "text-primary-foreground"
@@ -109,12 +140,12 @@ export function WhatWeDoSection() {
                       </h3>
 
                       {/* Steps as Badges */}
-                      <div className="flex flex-wrap gap-2 mt-4">
+                      <div className="flex flex-wrap gap-2 mt-3 sm:mt-4">
                         {steps.map((step: string) => (
                           <Badge
                             key={step}
                             variant="outline"
-                            className={`text-[10px] uppercase tracking-wide h-8 px-3 py-2 rounded-md ${
+                            className={`text-[10px] uppercase tracking-wide h-7 sm:h-8 px-3 py-2 rounded-md ${
                               isSecondary
                                 ? "bg-secondary/10 text-muted-foreground border-secondary/30 shadow-md shadow-primary/80"
                                 : "bg-primary/10 text-primary-foreground border-primary/30 shadow-md shadow-secondary/40"
@@ -127,41 +158,15 @@ export function WhatWeDoSection() {
                     </CardHeader>
                   </div>
 
-                  {/* Image Section */}
-                  {image && typeof image === "string" && (
-                    <div className="relative w-full h-64 md:h-72 bg-gray-200 overflow-hidden">
-                      <Image
-                        src={image}
-                        alt={imageAlt || ""}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        fill
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                  )}
-                  {image && typeof image === "object" && "src" in image && (
-                    <div className="relative w-full h-64 md:h-72 bg-gray-200 overflow-hidden">
-                      <Image
-                        src={image as StaticImageData}
-                        alt={imageAlt || ""}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        fill
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                  )}
-                  {image && typeof image === "object" && !("src" in image) && (
-                    <div className="w-full h-64 md:h-72 bg-gray-200 overflow-hidden flex items-center justify-center">
-                      {image}
-                    </div>
-                  )}
+                  {/* Image */}
+                  <ServiceImage image={image} imageAlt={imageAlt} />
 
-                  {/* Bottom Content Section */}
-                  <CardContent className="flex flex-col gap-2 grow bg-background px-6 py-4">
-                    <p className="text-xs md:text-xs font-semibold uppercase tracking-wider text-secondary">
+                  {/* Bottom Content */}
+                  <CardContent className="flex flex-col gap-2 grow bg-background px-5 sm:px-6 py-4 sm:py-5">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-secondary">
                       {serviceOffering}
                     </p>
-                    <p className="text-sm md:text-base leading-relaxed">
+                    <p className="text-sm sm:text-base leading-relaxed">
                       {subtitle}
                     </p>
                   </CardContent>
