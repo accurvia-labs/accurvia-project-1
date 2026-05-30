@@ -44,7 +44,7 @@ export function HeroSection() {
       </div>
 
       {/* Desktop Side-by-Side Layout */}
-      <div className="hidden lg:flex bg-primary items-center gap-16 px-14 py-18">
+      <div className="hidden lg:flex bg-primary items-center gap-16 px-14 py-14">
         <div className="flex-1 w-full">
           {/* Hero Heading */}
           <h1
@@ -74,7 +74,7 @@ export function HeroSection() {
         {/* Image */}
         <div className="relative w-full flex-1 shadow-2xl shadow-foreground rounded-2xl overflow-hidden">
           <div className="rounded-2xl bg-muted overflow-hidden">
-            <div className="relative filter drop-shadow-2xl drop-shadow-foreground w-full aspect-4/5 origin-top-left rotate-25 translate-y-10 hover:rotate-0 hover:translate-y-0 hover:translate-x-0 transition-all duration-700 ease-in-out">
+            <div className="relative filter drop-shadow-2xl drop-shadow-foreground w-full h-140 aspect-4/5 origin-top-left rotate-25 translate-y-10 hover:rotate-0 hover:translate-y-0 hover:translate-x-0 transition-all duration-700 ease-in-out">
               <Image
                 src={dareOdualePortrait}
                 alt="Dare Oduale portrait"

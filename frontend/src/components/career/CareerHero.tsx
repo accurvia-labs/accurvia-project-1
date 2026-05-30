@@ -34,7 +34,6 @@ export function CareerHero() {
           <div className="flex-1 relative w-full">
             {/* Main hero image */}
             <div
-             
               className="relative w-full h-64 sm:h-96 md:h-120 lg:h-140 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 drop-shadow-xl"
               aria-hidden="true"
             >
@@ -67,14 +66,7 @@ export function CareerHero() {
             </motion.div>
 
             {/* Portrait — overlaps bottom-right of hero image */}
-            <motion.div
-              animate={{ y: [0, 80, 0] }}
-              transition={{
-                duration: 3.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 2,
-              }}
+            <div
               className="absolute -bottom-10 -right-3 sm:-bottom-16 sm:-right-6 lg:-bottom-14 lg:-right-14 w-28 h-32 sm:w-48 sm:h-52 md:w-64 md:h-72 lg:w-69 lg:h-70 rounded-2xl border-4 sm:border-8 border-card overflow-hidden hover:scale-105 transition-transform duration-300 drop-shadow-xl"
               aria-hidden="true"
             >
@@ -85,7 +77,7 @@ export function CareerHero() {
                 priority
                 className="object-cover rounded-2xl"
               />
-            </motion.div>
+            </div>
           </div>
 
           {/* Right — Content */}
@@ -131,19 +123,19 @@ export function CareerHero() {
         className="bg-primary mt-16 sm:mt-20 lg:mt-24"
         aria-labelledby="stats-heading"
       >
-        <div className="px-6 sm:px-10 md:px-14 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-6">
+        <div className="px-6 sm:px-10 md:px-14 py-8 sm:py-12 md:py-16 mx-auto max-w-7xl">
+          <div className="grid grid-cols-4 gap-2 sm:gap-6 md:gap-8">
             {stats.map(({ num, label }, i) => (
               <div
                 key={label}
-                className={`flex flex-col items-center gap-2 ${
-                  i > 0 ? "md:border-l md:border-border/20" : ""
+                className={`flex flex-col items-center gap-1 sm:gap-2 ${
+                  i > 0 ? "border-l border-border/20" : ""
                 }`}
               >
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground leading-none">
+                <h2 className="text-md sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary-foreground leading-none text-center">
                   {num}
                 </h2>
-                <span className="text-primary-foreground/60 text-[9px] sm:text-[10px] tracking-[2px] uppercase leading-wider text-center">
+                <span className="text-primary-foreground/60 text-[7px] sm:text-[9px] md:text-[10px] tracking-[1.5px] sm:tracking-[2px] uppercase leading-tight text-center px-1">
                   {label}
                 </span>
               </div>

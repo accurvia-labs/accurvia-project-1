@@ -20,11 +20,11 @@ export function JoinTheJourneyCTA() {
           build together.
         </p>
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
+        <div className="flex flex-row gap-4 md:gap-6 justify-center items-center">
           {/* Primary CTA */}
           <Link
             href="/contact"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 md:px-20 md:py-4 text-sm rounded-full md:text-2xl font-semibold transition-smooth hover-l"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 md:py-3 text-xs rounded-full md:text-md font-semibold transition-smooth hover-l"
           >
             Inquire for <br />
             Birmingham
@@ -33,7 +33,7 @@ export function JoinTheJourneyCTA() {
           {/* Secondary CTA */}
           <Link
             href="/contact"
-            className="border border-primary text-primary hover:bg-primary/80 hover:text-primary-foreground px-6 py-2 md:px-20 md:py-4 text-sm rounded-full md:text-2xl font-semibold transition-smooth hover-l"
+            className="border border-primary text-primary hover:bg-primary/80 hover:text-primary-foreground px-6 py-2 md:py-3 text-xs rounded-full md:text-md font-semibold transition-smooth hover-l"
           >
             Partner with <br />
             Ministry
