@@ -29,7 +29,7 @@ export function NavBar() {
       className="w-full sticky top-0 z-50 border-b bg-background/90 backdrop-blur-sm"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-14 py-4 sm:py-5 md:py-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-4 sm:px-10 sm:py-3 md:px-14 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"

@@ -67,9 +67,9 @@ export function LifeSchoolMandateSection() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className="flex-1 w-full relative pb-16 sm:pb-20 lg:pb-24">
+          <div className="flex-1 w-full relative pb-28 sm:pb-32 lg:pb-36">
             {/* Image */}
-            <div className="relative w-full h-72 sm:h-96 md:h-120 lg:h-140 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+            <div className="relative w-full h-72 sm:h-96 md:h-[480px] lg:h-[520px] rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
               <Image
                 src={LifeSchoolImage}
                 alt="LIFE School and Integration"
@@ -78,9 +78,9 @@ export function LifeSchoolMandateSection() {
               />
             </div>
 
-            {/* Quote Card — always overlays the image bottom-left */}
+            {/* Quote Card */}
             <motion.div
-              animate={{ y: [0, 8, 0] }}
+              animate={{ y: [0, -8, 0] }}
               transition={{
                 duration: 3.5,
                 repeat: Infinity,
@@ -88,33 +88,24 @@ export function LifeSchoolMandateSection() {
                 delay: 2,
               }}
               className="
-                absolute -bottom-4 -left-4
-                bg-card border border-border rounded-xl p-3
-                flex items-center gap-2.5
+                absolute bottom-10 left-0
+                lg:-left-14
+                bg-primary
+                w-[80%] sm:w-72 lg:w-80
+                rounded-2xl
+                p-4 sm:p-6
+                flex flex-col justify-center
                 shadow-[0_10px_30px_rgba(0,0,0,0.35)]
+                transition-opacity duration-300
               "
             >
-              <div
-                className="
-              absolute bottom-0 left-0
-              sm:bottom-0 sm:left-0
-              lg:bottom-0 lg:-left-14
-              bg-primary
-              w-[75%] sm:w-72 lg:w-80
-              rounded-2xl
-              p-4 sm:p-6
-              flex flex-col justify-center
-              transition-opacity duration-300
-            "
-              >
-                <p className="text-secondary font-semibold text-xl sm:text-2xl">
-                  99
-                </p>
-                <p className="text-xs sm:text-sm lg:text-md text-primary-foreground/80 mt-2 leading-5 sm:leading-6">
-                  &quot;We are called to be as brilliant in the boardroom as we
-                  are devoted in the sanctuary.&quot;
-                </p>
-              </div>
+              <p className="text-secondary font-semibold text-xl sm:text-2xl">
+                99
+              </p>
+              <p className="text-xs sm:text-sm text-primary-foreground/80 mt-2 leading-5 sm:leading-6">
+                &quot;We are called to be as brilliant in the boardroom as we
+                are devoted in the sanctuary.&quot;
+              </p>
             </motion.div>
           </div>
         </div>

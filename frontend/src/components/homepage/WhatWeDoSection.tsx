@@ -130,11 +130,7 @@ export function WhatWeDoSection() {
                   >
                     <CardHeader className="pb-4">
                       <h3
-                        className={`text-lg sm:text-xl md:text-2xl font-bold mb-2 font-heading ${
-                          isSecondary
-                            ? "text-muted-foreground"
-                            : "text-primary-foreground"
-                        }`}
+                        className={`text-lg sm:text-xl md:text-2xl font-bold mb-2 font-heading`}
                       >
                         {title}
                       </h3>
@@ -147,7 +143,7 @@ export function WhatWeDoSection() {
                             variant="outline"
                             className={`text-[10px] uppercase tracking-wide h-7 sm:h-8 px-3 py-2 rounded-md ${
                               isSecondary
-                                ? "bg-secondary/10 text-muted-foreground border-secondary/30 shadow-md shadow-primary/80"
+                                ? "bg-secondary/10 text-secondary-foreground border-secondary/30 shadow-md shadow-primary/80"
                                 : "bg-primary/10 text-primary-foreground border-primary/30 shadow-md shadow-secondary/40"
                             }`}
                           >
