@@ -23,7 +23,7 @@ export function BookCallCTA() {
         {/* CTA Button */}
         <Button
           variant="default"
-          className="bg-secondary text-muted-foreground hover:bg-secondary/90 px-8 sm:px-12 py-3 font-bold h-11 sm:h-12 rounded-md mt-6 sm:mt-8"
+          className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 sm:px-12 py-3 font-bold h-11 sm:h-12 rounded-md mt-6 sm:mt-8"
           aria-label="Book a strategy call"
         >
           Book a Strategy Call
