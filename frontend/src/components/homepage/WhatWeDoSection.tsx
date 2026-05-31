@@ -31,7 +31,7 @@ const services: Service[] = [
   },
   {
     id: "2",
-    title: "Clerity Architects",
+    title: "Clarity Architects",
     subtitle:
       "Leadership & Digital Transformation Coaching for high-stakes decision makers.",
     steps: ["Diagnostic", "Structured Session", "Integration"],
