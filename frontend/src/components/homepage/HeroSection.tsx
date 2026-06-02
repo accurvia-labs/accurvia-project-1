@@ -80,6 +80,7 @@ export function HeroSection() {
                 alt="Dare Oduale portrait"
                 fill
                 priority
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover w-full h-full rounded-2xl"
               />
             </div>

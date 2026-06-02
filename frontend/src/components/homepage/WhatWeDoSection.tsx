@@ -7,17 +7,7 @@ import Enggagement from "../../../public/images/Enggagement.png";
 import Team from "../../../public/images/team.png";
 import Group from "../../../public/images/group.png";
 
-interface Service {
-  id: string;
-  title: string;
-  subtitle: string;
-  steps: string[];
-  serviceOffering: string;
-  image: string | StaticImageData;
-  imageAlt: string;
-}
-
-const services: Service[] = [
+const services = [
   {
     id: "1",
     title: "Team & Organization",
@@ -31,7 +21,7 @@ const services: Service[] = [
   },
   {
     id: "2",
-    title: "Clarity Architects",
+    title: "Clerity Architects",
     subtitle:
       "Leadership & Digital Transformation Coaching for high-stakes decision makers.",
     steps: ["Diagnostic", "Structured Session", "Integration"],
@@ -52,39 +42,6 @@ const services: Service[] = [
       "Diverse team members working together in agile bootcamp training session on project execution",
   },
 ];
-
-function ServiceImage({
-  image,
-  imageAlt,
-}: {
-  image: string | StaticImageData;
-  imageAlt: string;
-}) {
-  if (!image) return null;
-
-  if (
-    typeof image === "string" ||
-    (typeof image === "object" && "src" in image)
-  ) {
-    return (
-      <div className="relative w-full h-52 sm:h-60 md:h-64 lg:h-72 bg-gray-200 overflow-hidden">
-        <Image
-          src={image as StaticImageData}
-          alt={imageAlt || ""}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          fill
-          className="object-cover"
-        />
-      </div>
-    );
-  }
-
-  return (
-    <div className="w-full h-52 sm:h-60 md:h-64 lg:h-72 bg-gray-200 overflow-hidden flex items-center justify-center">
-      {image}
-    </div>
-  );
-}
 
 export function WhatWeDoSection() {
   return (
@@ -155,7 +112,15 @@ export function WhatWeDoSection() {
                   </div>
 
                   {/* Image */}
-                  <ServiceImage image={image} imageAlt={imageAlt} />
+                  <div className="relative w-full h-52 sm:h-60 md:h-64 lg:h-72 bg-gray-200 overflow-hidden">
+                    <Image
+                      src={image as StaticImageData}
+                      alt={imageAlt}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
 
                   {/* Bottom Content */}
                   <CardContent className="flex flex-col gap-2 grow bg-background px-5 sm:px-6 py-4 sm:py-5">

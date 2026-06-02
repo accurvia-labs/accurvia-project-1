@@ -4,16 +4,10 @@ import Image from "next/image";
 import careerHeroImage from "../../../public/images/career-hero.png";
 import dareOdualePortrait from "../../../public/images/dare-oduale.png";
 import { ArrowRight } from "lucide-react";
-import { Badge } from "../ui/badge";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-interface Stat {
-  num: string;
-  label: string;
-}
-
-const STATS: Stat[] = [
+const stats = [
   { num: "120", label: "Countries (Global Reach)" },
   { num: "13M+", label: "Users Impacted" },
   { num: "15", label: "Years Experience" },
@@ -21,7 +15,6 @@ const STATS: Stat[] = [
 ];
 
 export function CareerHero() {
-  const stats = STATS;
   return (
     <section
       className="overflow-hidden bg-card"
@@ -42,6 +35,7 @@ export function CareerHero() {
                 alt="Career hero visual representation"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-2xl"
               />
             </div>
@@ -65,7 +59,6 @@ export function CareerHero() {
               </p>
             </motion.div>
 
-            {/* Portrait — overlaps bottom-right of hero image */}
             <div
               className="absolute -bottom-10 -right-3 sm:-bottom-16 sm:-right-6 lg:-bottom-14 lg:-right-14 w-28 h-32 sm:w-48 sm:h-52 md:w-64 md:h-72 lg:w-69 lg:h-70 rounded-2xl border-4 sm:border-8 border-card overflow-hidden hover:scale-105 transition-transform duration-300 drop-shadow-xl"
               aria-hidden="true"
@@ -75,6 +68,7 @@ export function CareerHero() {
                 alt="Dare Oduale portrait"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-2xl"
               />
             </div>

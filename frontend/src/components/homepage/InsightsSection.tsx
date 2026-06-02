@@ -5,22 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Plus } from "lucide-react";
 
-interface Insight {
-  id: string;
-  category: string;
-  title: string;
-  description: string;
-  readTime: string;
-  publishDate: string;
-  variant?: "primary" | "secondary";
-}
-
 const BADGE_VARIANTS: Record<string, string> = {
   primary: "bg-primary text-white",
   secondary: "bg-secondary text-white",
 };
 
-const insights: Insight[] = [
+const insights = [
   {
     id: "business-design",
     category: "BUSINESS DESIGN",
