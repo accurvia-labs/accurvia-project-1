@@ -18,6 +18,7 @@ export function TheGenesis() {
               alt="The Genesis visual representation"
               fill
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover rounded-2xl"
             />
           </div>

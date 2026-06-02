@@ -46,6 +46,7 @@ export function CareerJourney() {
                 alt="Career journey visual representation"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-2xl"
               />
             </div>

@@ -3,13 +3,7 @@
 import { Card, CardContent, CardDescription } from "@/components/ui/card";
 import { Star, User } from "lucide-react";
 
-interface Testimonial {
-  quote: string;
-  name: string;
-  role: string;
-}
-
-const testimonials: Testimonial[] = [
+const testimonials = [
   {
     quote:
       "Dare's ability to bridge the gap between complex technical architecture and human-centric leadership is unparalleled in the industry.",

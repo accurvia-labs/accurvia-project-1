@@ -1,16 +1,9 @@
 "use client";
 
-import { ReactNode } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Globe, Users, House, Zap } from "lucide-react";
 
-interface Achievement {
-  icon: ReactNode;
-  title: string;
-  desc: string;
-}
-
-const achievements: Achievement[] = [
+const achievements = [
   {
     icon: <Globe size={26} color="var(--foreground)" />,
     title: "120 Countries Playbook",
