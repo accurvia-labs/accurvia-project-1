@@ -9,12 +9,12 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const platformLinks = [
-    { label: "Home", href: "#" },
+    { label: "Home", href: "/" },
     { label: "Career", href: "/career" },
     { label: "Business", href: "/business" },
   ];
 
-  const resourseLinks = [
+  const resourceLinks = [
     { label: "Ministry", href: "/ministry" },
     { label: "Insight", href: "/insight" },
     { label: "Contact", href: "/contact" },
@@ -26,9 +26,8 @@ export function Footer() {
       role="contentinfo"
     >
       {/* Main Content */}
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-20 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 pb-10 sm:pb-12 border-b border-primary-foreground/20">
-
           {/* Brand Section */}
           <div className="col-span-1">
             <h2 className="text-xl sm:text-2xl font-bold font-heading mb-2">
@@ -78,7 +77,7 @@ export function Footer() {
             <div>
               <h4 className="text-base sm:text-lg font-bold">Resources</h4>
               <ul className="mt-3 sm:mt-4 space-y-3 sm:space-y-4 text-sm">
-                {resourseLinks.map((item) => (
+                {resourceLinks.map((item) => (
                   <li key={item.label}>
                     <a
                       href={item.href}
@@ -99,12 +98,12 @@ export function Footer() {
               they&apos;re working inside of.&quot;
             </p>
 
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto hover:text-primary-foreground px-6 py-3 h-11 sm:h-12 text-xs font-semibold uppercase transition-colors duration-200"
+            <Link
+              href=""
+              className="w-full sm:w-auto border rounded-md hover:bg-primary-foreground/40 px-8 sm:px-12 py-3 font-bold h-11 sm:h-12 text-sm uppercase transition-colors duration-200"
             >
               Book a Strategy Call
-            </Button>
+            </Link>
           </div>
         </div>
 

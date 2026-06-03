@@ -2,8 +2,7 @@
 
 import { Card, CardContent, CardHeader } from "../ui/card";
 
-export function FormationAndFaith() {
-  const formationAreas = [
+const formationAreas = [
     {
       icon: "15",
       title: "Children's Church",
@@ -22,11 +21,12 @@ export function FormationAndFaith() {
       description:
         "Navigating the spiritual landscape of over 200 young adults. Mentorship, structure, and visionary leadership became the primary tools of service.",
     },
-  ];
-
+];
+  
+export function FormationAndFaith() {
   return (
     <section className="bg-border">
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         {/* Section Heading */}
         <div className="text-center">
           <h1 className="text-primary text-3xl md:text-4xl italic font-normal tracking-[-0.045em] leading-[1.05]">

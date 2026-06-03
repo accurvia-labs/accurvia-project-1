@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import Image from "next/image";
 import dareOdualePortrait from "../../../public/images/dare-oduale.png";
 
@@ -33,18 +33,18 @@ export function HeroSection() {
             Business design and transformation coaching for founders, programme
             leads, and executives who need to move.
           </p>
-          <Button
-            variant="default"
+          <Link
+            href=""
             className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-12 py-3 font-bold h-12 rounded-md"
             aria-label="Book a strategy call"
           >
             Book a Strategy Call
-          </Button>
+          </Link>
         </div>
       </div>
 
       {/* Desktop Side-by-Side Layout */}
-      <div className="hidden lg:flex bg-primary items-center gap-16 px-14 py-14">
+      <div className="hidden lg:flex bg-primary items-center gap-16 px-9 py-14">
         <div className="flex-1 w-full">
           {/* Hero Heading */}
           <h1
@@ -62,13 +62,13 @@ export function HeroSection() {
             Business design and transformation coaching for founders, programme
             leads, and executives who need to move.
           </p>
-          <Button
-            variant="default"
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-14 py-4 font-bold h-14 rounded-md mt-4"
+          <Link
+            href=""
+            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-8 sm:px-12 py-3 font-bold h-11 sm:h-12 text-sm rounded-md mt-8 inline-block"
             aria-label="Book a strategy call"
           >
             Book a Strategy Call
-          </Button>
+          </Link>
         </div>
 
         {/* Image */}

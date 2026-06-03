@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
+
 export function CareerCTA() {
   return (
     <section aria-labelledby="career-cta-heading">
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-3xl flex flex-col items-center gap-6 sm:gap-8 text-center">
-
+      <div className="px-6 sm:px-10 md:px-14 py-10 sm:py-14 md:py-16 mx-auto max-w-3xl flex flex-col items-center gap-6 sm:gap-8 text-center">
         {/* Heading */}
         <h2
           id="career-cta-heading"
@@ -15,13 +16,12 @@ export function CareerCTA() {
         </h2>
 
         {/* CTA Button */}
-        <a
-          href="#"
-          className="inline-flex items-center px-8 sm:px-10 py-3.5 sm:py-4 bg-primary text-primary-foreground text-sm sm:text-base font-medium rounded-full hover:bg-primary/80 transition-colors duration-200"
+        <Link
+          href=""
+          className="inline-flex items-center gap-2.5 px-8 sm:px-10 py-3.5 sm:py-4 bg-primary text-primary-foreground text-sm sm:text-base font-medium rounded-full hover:bg-primary/80 transition-colors duration-200"
         >
           Book a strategy call today
-        </a>
-
+        </Link>
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ export function AboutSection() {
       className="w-full bg-primary-foreground"
       aria-labelledby="about-heading"
     >
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 xl:gap-32 px-6 sm:px-10 md:px-14 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 xl:gap-32 px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         {/* Left — Label */}
         <div className="shrink-0">
           <p className="font-inter text-xs font-bold tracking-[1.5px] uppercase text-secondary">
@@ -62,14 +62,6 @@ export function AboutSection() {
               </Link>
             ))}
           </div>
-
-          {/* Read More Link */}
-          <Link
-            href="#"
-            className="font-inter font-semibold inline-flex items-center text-sm sm:text-base hover:underline mt-5 sm:mt-6 text-secondary"
-          >
-            Read my Full Story in these three aspects
-          </Link>
         </div>
       </div>
     </section>

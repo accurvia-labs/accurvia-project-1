@@ -66,7 +66,7 @@ export function CompanyMix() {
       >
         {/* Carousel Viewport */}
         <div
-          className={`${styles.viewport} h-30 sm:h-34 md:h-40 overflow-hidden`}
+          className={`${styles.viewport} h-30 sm:h-34 md:h-60 pt-8  overflow-hidden`}
         >
           <div
             className={`${styles.track} flex items-center gap-8 sm:gap-10 md:gap-14 w-max px-4 sm:px-6 md:px-7 h-full`}
@@ -93,7 +93,7 @@ export function CompanyMix() {
 
         {/* Caption */}
         {caption && (
-          <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed text-center px-6 mt-3 sm:mt-4 mb-4 sm:mb-6 md:mb-8">
+          <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed text-center px-6 mt-3 sm:mt-8 mb-4 sm:mb-6 md:mb-8">
             {caption}
           </p>
         )}

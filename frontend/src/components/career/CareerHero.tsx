@@ -21,7 +21,7 @@ export function CareerHero() {
       aria-labelledby="career-hero-heading"
     >
       {/* Hero Section */}
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start justify-center">
           {/* Left — Images */}
           <div className="flex-1 relative w-full">
@@ -100,7 +100,7 @@ export function CareerHero() {
               {/* CTA */}
               <div className="pt-1 sm:pt-2">
                 <Link
-                  href="#"
+                  href=""
                   className="inline-flex items-center gap-2.5 px-8 sm:px-10 py-3.5 sm:py-4 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.14em] uppercase rounded-full hover:bg-primary/80 transition-all duration-200"
                 >
                   Explore the Journey
@@ -114,10 +114,10 @@ export function CareerHero() {
 
       {/* Stats Section */}
       <div
-        className="bg-primary mt-16 sm:mt-20 lg:mt-24"
+        className="bg-primary mt-6 sm:mt-8 lg:mt-10"
         aria-labelledby="stats-heading"
       >
-        <div className="px-6 sm:px-10 md:px-14 py-8 sm:py-12 md:py-16 mx-auto max-w-7xl">
+        <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
           <div className="grid grid-cols-4 gap-2 sm:gap-6 md:gap-8">
             {stats.map(({ num, label }, i) => (
               <div

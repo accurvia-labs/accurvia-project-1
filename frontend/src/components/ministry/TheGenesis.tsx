@@ -6,7 +6,7 @@ import Genesis from "../../../public/images/genesis.jpg";
 export function TheGenesis() {
   return (
     <section aria-labelledby="career journey">
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row gap-10 sm:gap-14 lg:gap-24 items-center">
           {/* Image */}
           <div

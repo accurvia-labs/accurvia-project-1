@@ -47,7 +47,7 @@ const insights = [
 export function InsightsSection() {
   return (
     <section className="w-full" aria-labelledby="insights-heading">
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-10 sm:mb-14 md:mb-16 text-center">
           <p className="text-xs sm:text-sm font-inter font-bold mb-2 uppercase tracking-widest text-secondary">

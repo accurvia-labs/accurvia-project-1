@@ -3,7 +3,7 @@
 export function Philosophy() {
   return (
     <section aria-labelledby="philosophy-heading">
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-4xl text-center">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-4xl text-center">
         {/* Label */}
         <p className="text-primary text-[10px] font-semibold tracking-[0.24em] uppercase">
           The Philosophy

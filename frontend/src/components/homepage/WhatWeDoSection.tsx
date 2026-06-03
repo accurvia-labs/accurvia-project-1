@@ -46,7 +46,7 @@ const services = [
 export function WhatWeDoSection() {
   return (
     <section className="w-full bg-border" aria-labelledby="what-we-do-heading">
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-10 sm:mb-14 md:mb-16 text-center">
           <p className="font-inter text-xs font-bold tracking-[1.5px] uppercase text-secondary mb-3 sm:mb-4">
