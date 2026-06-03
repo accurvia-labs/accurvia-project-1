@@ -20,7 +20,7 @@ export function ContactHero() {
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="bg-foreground">
           <div className="max-w-lg h-auto m-auto" aria-hidden="true">
-            <Image src={phoneMockup} alt="" sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" />
+            <Image src={phoneMockup} alt="" sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" loading="lazy" />
           </div>
         </div>
 

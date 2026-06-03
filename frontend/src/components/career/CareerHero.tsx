@@ -101,7 +101,7 @@ export function CareerHero() {
               <div className="pt-1 sm:pt-2">
                 <Link
                   href=""
-                  className="inline-flex items-center gap-2.5 px-8 sm:px-10 py-3.5 sm:py-4 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.14em] uppercase rounded-full hover:bg-primary/80 transition-all duration-200"
+                  className="inline-flex items-center justify-center gap-2.5 h-11 sm:h-12 px-8 sm:px-10 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.14em] uppercase rounded-full hover:bg-primary/80 transition-all duration-200"
                 >
                   Explore the Journey
                   <ArrowRight size={14} />

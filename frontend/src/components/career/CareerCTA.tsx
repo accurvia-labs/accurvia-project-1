@@ -18,7 +18,7 @@ export function CareerCTA() {
         {/* CTA Button */}
         <Link
           href=""
-          className="inline-flex items-center gap-2.5 px-8 sm:px-10 py-3.5 sm:py-4 bg-primary text-primary-foreground text-sm sm:text-base font-medium rounded-full hover:bg-primary/80 transition-colors duration-200"
+          className="inline-flex items-center justify-center gap-2.5 h-11 sm:h-12 px-8 sm:px-10 bg-primary text-primary-foreground text-sm sm:text-base font-medium rounded-full hover:bg-primary/80 transition-colors duration-200"
         >
           Book a strategy call today
         </Link>

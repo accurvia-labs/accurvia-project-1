@@ -35,7 +35,7 @@ export function HeroSection() {
           </p>
           <Link
             href=""
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-12 py-3 font-bold h-12 rounded-md"
+            className="inline-flex items-center justify-center bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-8 sm:px-12 font-bold h-11 sm:h-12 text-sm rounded-md"
             aria-label="Book a strategy call"
           >
             Book a Strategy Call
@@ -64,7 +64,7 @@ export function HeroSection() {
           </p>
           <Link
             href=""
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-8 sm:px-12 py-3 font-bold h-11 sm:h-12 text-sm rounded-md mt-8 inline-block"
+            className="inline-flex items-center justify-center bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-8 sm:px-12 font-bold h-11 sm:h-12 text-sm rounded-md mt-8"
             aria-label="Book a strategy call"
           >
             Book a Strategy Call
