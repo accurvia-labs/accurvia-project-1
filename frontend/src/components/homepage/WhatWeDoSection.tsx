@@ -7,17 +7,7 @@ import Enggagement from "../../../public/images/Enggagement.png";
 import Team from "../../../public/images/team.png";
 import Group from "../../../public/images/group.png";
 
-interface Service {
-  id: string;
-  title: string;
-  subtitle: string;
-  steps: string[];
-  serviceOffering: string;
-  image: string | StaticImageData;
-  imageAlt: string;
-}
-
-const services: Service[] = [
+const services = [
   {
     id: "1",
     title: "Team & Organization",
@@ -31,7 +21,7 @@ const services: Service[] = [
   },
   {
     id: "2",
-    title: "Clarity Architects",
+    title: "Clerity Architects",
     subtitle:
       "Leadership & Digital Transformation Coaching for high-stakes decision makers.",
     steps: ["Diagnostic", "Structured Session", "Integration"],
@@ -53,43 +43,10 @@ const services: Service[] = [
   },
 ];
 
-function ServiceImage({
-  image,
-  imageAlt,
-}: {
-  image: string | StaticImageData;
-  imageAlt: string;
-}) {
-  if (!image) return null;
-
-  if (
-    typeof image === "string" ||
-    (typeof image === "object" && "src" in image)
-  ) {
-    return (
-      <div className="relative w-full h-52 sm:h-60 md:h-64 lg:h-72 bg-gray-200 overflow-hidden">
-        <Image
-          src={image as StaticImageData}
-          alt={imageAlt || ""}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          fill
-          className="object-cover"
-        />
-      </div>
-    );
-  }
-
-  return (
-    <div className="w-full h-52 sm:h-60 md:h-64 lg:h-72 bg-gray-200 overflow-hidden flex items-center justify-center">
-      {image}
-    </div>
-  );
-}
-
 export function WhatWeDoSection() {
   return (
     <section className="w-full bg-border" aria-labelledby="what-we-do-heading">
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-10 sm:mb-14 md:mb-16 text-center">
           <p className="font-inter text-xs font-bold tracking-[1.5px] uppercase text-secondary mb-3 sm:mb-4">
@@ -155,7 +112,15 @@ export function WhatWeDoSection() {
                   </div>
 
                   {/* Image */}
-                  <ServiceImage image={image} imageAlt={imageAlt} />
+                  <div className="relative w-full h-52 sm:h-60 md:h-64 lg:h-72 bg-gray-200 overflow-hidden">
+                    <Image
+                      src={image as StaticImageData}
+                      alt={imageAlt}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
 
                   {/* Bottom Content */}
                   <CardContent className="flex flex-col gap-2 grow bg-background px-5 sm:px-6 py-4 sm:py-5">

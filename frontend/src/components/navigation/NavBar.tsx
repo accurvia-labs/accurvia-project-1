@@ -29,7 +29,7 @@ export function NavBar() {
       className="w-full sticky top-0 z-50 border-b bg-background/90 backdrop-blur-sm"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 sm:px-10 sm:py-3 md:px-14 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 sm:py-3 md:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
@@ -56,13 +56,13 @@ export function NavBar() {
         </div>
 
         {/* CTA Button — Desktop */}
-        <Button
-          variant="default"
-          className="hidden lg:flex px-6 xl:px-8 py-3 font-bold h-11 xl:h-12 rounded-md hover:bg-primary/90 text-sm shrink-0"
+        <Link
+          href=""
+          className="hidden lg:flex px-6 sm:px-8 py-3 font-bold h-11 sm:h-12 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 text-sm shrink-0"
           aria-label="Book a strategy call"
         >
           Book a Strategy Call
-        </Button>
+        </Link>
 
         {/* Mobile Menu Trigger */}
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>

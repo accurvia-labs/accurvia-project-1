@@ -1,16 +1,9 @@
 "use client";
 
-import { ReactNode } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Globe, Users, House, Zap } from "lucide-react";
 
-interface Achievement {
-  icon: ReactNode;
-  title: string;
-  desc: string;
-}
-
-const achievements: Achievement[] = [
+const achievements = [
   {
     icon: <Globe size={26} color="var(--foreground)" />,
     title: "120 Countries Playbook",
@@ -36,7 +29,7 @@ const achievements: Achievement[] = [
 export function KeyAchievements() {
   return (
     <section className="bg-border" aria-labelledby="key-achievements-heading">
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         {/* Section Heading */}
         <div className="text-center">
           <p className="text-primary text-[10px] font-semibold tracking-[0.24em] uppercase">

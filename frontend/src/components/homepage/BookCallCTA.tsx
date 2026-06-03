@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "../ui/button";
+import Link from "next/link";
 
 export function BookCallCTA() {
   return (
@@ -21,13 +21,13 @@ export function BookCallCTA() {
         </p>
 
         {/* CTA Button */}
-        <Button
-          variant="default"
-          className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 sm:px-12 py-3 font-bold h-11 sm:h-12 rounded-md mt-6 sm:mt-8"
+        <Link
+          href=""
+          className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 sm:px-12 py-3 font-bold h-11 sm:h-12 text-sm rounded-md mt-6 sm:mt-8 inline-block"
           aria-label="Book a strategy call"
         >
           Book a Strategy Call
-        </Button>
+        </Link>
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export function LifeSchoolMandateSection() {
   return (
     <section className="bg-background">
-      <div className="px-6 sm:px-10 md:px-14 py-10 sm:py-16 md:py-24 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start justify-center">
           {/* LEFT COLUMN */}
           <div className="flex-1 w-full">
@@ -67,13 +67,14 @@ export function LifeSchoolMandateSection() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className="flex-1 w-full relative pb-28 sm:pb-32 lg:pb-36">
+          <div className="flex-1 w-full relative pb-8 sm:pb-32 lg:pb-36">
             {/* Image */}
-            <div className="relative w-full h-72 sm:h-96 md:h-[480px] lg:h-[520px] rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+            <div className="relative w-full h-72 sm:h-96 md:h-120 lg:h-130 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
               <Image
                 src={LifeSchoolImage}
                 alt="LIFE School and Integration"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-2xl"
               />
             </div>
@@ -88,7 +89,7 @@ export function LifeSchoolMandateSection() {
                 delay: 2,
               }}
               className="
-                absolute bottom-10 left-0
+                absolute bottom-1 left-0
                 lg:-left-14
                 bg-primary
                 w-[80%] sm:w-72 lg:w-80

@@ -8,7 +8,7 @@ export function JoinTheJourneyCTA() {
       className="bg-border w-full"
       aria-labelledby="join-the-journey-heading"
     >
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl text-center">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl text-center">
         {/* Heading */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-8 md:mb-12">
           Join the Journey
@@ -24,19 +24,17 @@ export function JoinTheJourneyCTA() {
           {/* Primary CTA */}
           <Link
             href="/contact"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 md:py-3 text-xs rounded-full md:text-md font-semibold transition-smooth hover-l"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 sm:px-10 py-3.5 sm:py-4 text-xs rounded-full md:text-md font-semibold transition-smooth hover-l"
           >
-            Inquire for <br />
-            Birmingham
+            Inquire for Birmingham
           </Link>
 
           {/* Secondary CTA */}
           <Link
             href="/contact"
-            className="border border-primary text-primary hover:bg-primary/80 hover:text-primary-foreground px-6 py-2 md:py-3 text-xs rounded-full md:text-md font-semibold transition-smooth hover-l"
+            className="border border-primary text-primary hover:bg-primary/80 hover:text-primary-foreground px-8 sm:px-10 py-3.5 sm:py-4 text-xs rounded-full md:text-md font-semibold transition-smooth hover-l"
           >
-            Partner with <br />
-            Ministry
+            Partner with Ministry
           </Link>
         </div>
       </div>

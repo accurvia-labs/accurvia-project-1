@@ -6,7 +6,7 @@ import CareerJourneyImage from "../../../public/images/career-journey.png";
 export function CareerJourney() {
   return (
     <section aria-labelledby="career journey">
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row gap-10 sm:gap-14 lg:gap-20 items-center">
           {/* Left — Content */}
           <div className="flex-1 w-full">
@@ -46,6 +46,7 @@ export function CareerJourney() {
                 alt="Career journey visual representation"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-2xl"
               />
             </div>

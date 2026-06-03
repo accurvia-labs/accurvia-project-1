@@ -4,16 +4,10 @@ import Image from "next/image";
 import careerHeroImage from "../../../public/images/career-hero.png";
 import dareOdualePortrait from "../../../public/images/dare-oduale.png";
 import { ArrowRight } from "lucide-react";
-import { Badge } from "../ui/badge";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-interface Stat {
-  num: string;
-  label: string;
-}
-
-const STATS: Stat[] = [
+const stats = [
   { num: "120", label: "Countries (Global Reach)" },
   { num: "13M+", label: "Users Impacted" },
   { num: "15", label: "Years Experience" },
@@ -21,14 +15,13 @@ const STATS: Stat[] = [
 ];
 
 export function CareerHero() {
-  const stats = STATS;
   return (
     <section
       className="overflow-hidden bg-card"
       aria-labelledby="career-hero-heading"
     >
       {/* Hero Section */}
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start justify-center">
           {/* Left — Images */}
           <div className="flex-1 relative w-full">
@@ -42,6 +35,7 @@ export function CareerHero() {
                 alt="Career hero visual representation"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-2xl"
               />
             </div>
@@ -65,7 +59,6 @@ export function CareerHero() {
               </p>
             </motion.div>
 
-            {/* Portrait — overlaps bottom-right of hero image */}
             <div
               className="absolute -bottom-10 -right-3 sm:-bottom-16 sm:-right-6 lg:-bottom-14 lg:-right-14 w-28 h-32 sm:w-48 sm:h-52 md:w-64 md:h-72 lg:w-69 lg:h-70 rounded-2xl border-4 sm:border-8 border-card overflow-hidden hover:scale-105 transition-transform duration-300 drop-shadow-xl"
               aria-hidden="true"
@@ -75,6 +68,7 @@ export function CareerHero() {
                 alt="Dare Oduale portrait"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-2xl"
               />
             </div>
@@ -106,7 +100,7 @@ export function CareerHero() {
               {/* CTA */}
               <div className="pt-1 sm:pt-2">
                 <Link
-                  href="#"
+                  href=""
                   className="inline-flex items-center gap-2.5 px-8 sm:px-10 py-3.5 sm:py-4 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.14em] uppercase rounded-full hover:bg-primary/80 transition-all duration-200"
                 >
                   Explore the Journey
@@ -120,10 +114,10 @@ export function CareerHero() {
 
       {/* Stats Section */}
       <div
-        className="bg-primary mt-16 sm:mt-20 lg:mt-24"
+        className="bg-primary mt-6 sm:mt-8 lg:mt-10"
         aria-labelledby="stats-heading"
       >
-        <div className="px-6 sm:px-10 md:px-14 py-8 sm:py-12 md:py-16 mx-auto max-w-7xl">
+        <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
           <div className="grid grid-cols-4 gap-2 sm:gap-6 md:gap-8">
             {stats.map(({ num, label }, i) => (
               <div

@@ -1,8 +1,9 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import styles from "./StyleModuleCompanyMix/CompanyMix.module.css";
 
-// Image imports
+// Logos imports
 import logoAllianz from "../../../public/images/allianz.png";
 import logoBank from "../../../public/images/bank.jpg";
 import logoBbc from "../../../public/images/BBC.png";
@@ -20,29 +21,38 @@ import logoShell from "../../../public/images/shell.png";
 import skipton from "../../../public/images/skipton.png";
 import logoVenturesPlatform from "../../../public/images/ventures-platform.png";
 
+type SizeVariant = "small" | "medium" | "large";
+
 interface Company {
   name: string;
-  src: StaticImageData;
+  src: typeof logoAllianz;
+  size?: SizeVariant;
 }
 
-const COMPANIES: Company[] = [
+const company: Company[] = [
   { name: "Allianz", src: logoAllianz },
-  { name: "Bank", src: logoBank },
-  { name: "BBC", src: logoBbc },
-  { name: "BIP", src: logoBip },
+  { name: "Bank", src: logoBank, size: "large" },
+  { name: "BBC", src: logoBbc, size: "large" },
+  { name: "BIP", src: logoBip, size: "large" },
   { name: "BNP Paribas Cardif", src: logoBnpParibasCardif },
-  { name: "Dept. of Transport", src: logoDeptTrans },
-  { name: "Jaguar", src: logoJaguar },
+  { name: "Dept. of Transport", src: logoDeptTrans, size: "large" },
+  { name: "Jaguar", src: logoJaguar, size: "large" },
   { name: "KPMG", src: logoKpmg },
   { name: "Land Rover", src: logoLandRover },
-  { name: "nationalgrid", src: logoNationalgrid },
-  { name: "North Highland", src: logoNorthHighland },
+  { name: "nationalgrid", src: logoNationalgrid, size: "large" },
+  { name: "North Highland", src: logoNorthHighland, size: "large" },
   { name: "Roche", src: logoRoche },
-  { name: "Santander", src: santander },
+  { name: "Santander", src: santander, size: "large" },
   { name: "Shell", src: logoShell },
-  { name: "Skipton", src: skipton },
-  { name: "Ventures Platform", src: logoVenturesPlatform },
+  { name: "Skipton", src: skipton, size: "large" },
+  { name: "Ventures Platform", src: logoVenturesPlatform, size: "large" },
 ];
+
+const sizeClasses = {
+  small: "max-h-8 sm:max-h-10",
+  medium: "max-h-10 sm:max-h-12",
+  large: "max-h-12 sm:max-h-350",
+};
 
 const caption =
   "This is a mix of companies I have worked for and clients I have had.";
@@ -50,65 +60,40 @@ const caption =
 export function CompanyMix() {
   return (
     <>
-      <style>{`
-        @keyframes ticker {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-
-        .company-mix__track {
-          animation: ticker 40s linear infinite;
-        }
-
-        .company-mix__track:hover {
-          animation-play-state: paused;
-        }
-
-        .company-mix__viewport {
-          mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
-          -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
-        }
-
-        @media (max-width: 640px) {
-          .company-mix__track {
-            animation-duration: 28s;
-          }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .company-mix__track {
-            animation: none;
-          }
-        }
-      `}</style>
-
       <section
         className="border-t border-b overflow-hidden py-2 sm:py-0"
         aria-label="Companies and clients"
       >
         {/* Carousel Viewport */}
-        <div className="company-mix__viewport h-20 sm:h-24 md:h-28 overflow-hidden">
-          <div className="company-mix__track flex items-center gap-8 sm:gap-10 md:gap-14 w-max px-4 sm:px-6 md:px-7 h-full">
-            {[...COMPANIES, ...COMPANIES].map(({ name, src }, index) => (
-              <span
-                key={`${name}-${index}`}
-                className="shrink-0 flex items-center justify-center w-20 sm:w-24 md:w-28 h-10 sm:h-12 md:h-14"
-                title={name}
-              >
-                <Image
-                  src={src}
-                  alt={name}
-                  className="w-auto h-auto max-h-10 sm:max-h-12 object-contain"
-                  loading="lazy"
-                />
-              </span>
-            ))}
+        <div
+          className={`${styles.viewport} h-30 sm:h-34 md:h-60 pt-8  overflow-hidden`}
+        >
+          <div
+            className={`${styles.track} flex items-center gap-8 sm:gap-10 md:gap-14 w-max px-4 sm:px-6 md:px-7 h-full`}
+          >
+            {[...company, ...company].map(
+              ({ name, src, size = "medium" }, index) => (
+                <span
+                  key={`${name}-${index}`}
+                  className="shrink-0 flex items-center justify-center w-28 sm:w-34 md:w-48 h-40 sm:h-54 md:h-64"
+                  title={name}
+                >
+                  <Image
+                    src={src}
+                    alt={name}
+                    className={`w-auto h-auto ${sizeClasses[size]} object-contain`}
+                    sizes="(max-width: 640px) 380px, (max-width: 1024px) 460px, 612px"
+                    loading="lazy"
+                  />
+                </span>
+              ),
+            )}
           </div>
         </div>
 
         {/* Caption */}
         {caption && (
-          <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed text-center px-6 mt-3 sm:mt-4 mb-4 sm:mb-6 md:mb-8">
+          <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed text-center px-6 mt-3 sm:mt-8 mb-4 sm:mb-6 md:mb-8">
             {caption}
           </p>
         )}

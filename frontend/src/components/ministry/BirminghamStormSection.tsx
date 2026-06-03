@@ -5,7 +5,7 @@ import { Badge } from "../ui/badge";
 export function BirminghamStormSection() {
   return (
     <section className="bg-primary" aria-labelledby="birmingham-storm-heading">
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
+      <div className="px-6 sm:px-10 md:px-14 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         <div className="text-center mb-12 md:mb-16">
           <Badge
             variant="outline"

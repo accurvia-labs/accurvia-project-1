@@ -4,7 +4,7 @@ export function MinistryHero() {
       aria-labelledby="ministry-hero-heading"
       className="relative bg-primary overflow-hidden"
     >
-      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-6xl">
+      <div className="px-6 sm:px-10 md:px-14 py-12 sm:py-16 md:py-24 mx-auto max-w-7xl">
         {/* Label */}
         <p className="text-secondary text-[10px] sm:text-xs font-semibold tracking-[1.5px] uppercase mb-3 sm:mb-4">
           CALLING & CONVICTION
