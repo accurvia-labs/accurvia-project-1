@@ -56,7 +56,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Nav Links — side by side on all sizes */}
           <div className="grid grid-cols-2 gap-8 col-span-1">
             <div>
               <h4 className="text-base sm:text-lg font-bold">Platform</h4>
@@ -100,7 +99,7 @@ export function Footer() {
 
             <Link
               href=""
-              className="w-full sm:w-auto border rounded-md hover:bg-primary-foreground/40 px-8 sm:px-12 py-3 font-bold h-11 sm:h-12 text-sm uppercase transition-colors duration-200"
+              className="inline-flex items-center justify-center self-start lg:self-auto border rounded-md hover:bg-primary-foreground/40 px-8 sm:px-12 font-bold h-11 sm:h-12 text-xs uppercase transition-colors duration-200"
             >
               Book a Strategy Call
             </Link>

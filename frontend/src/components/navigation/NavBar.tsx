@@ -58,7 +58,7 @@ export function NavBar() {
         {/* CTA Button — Desktop */}
         <Link
           href=""
-          className="hidden lg:flex px-6 sm:px-8 py-3 font-bold h-11 sm:h-12 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 text-sm shrink-0"
+          className="hidden lg:inline-flex items-center justify-center px-6 xl:px-8 font-bold h-11 sm:h-12 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 text-sm shrink-0"
           aria-label="Book a strategy call"
         >
           Book a Strategy Call
@@ -105,13 +105,14 @@ export function NavBar() {
               </nav>
 
               {/* Mobile CTA */}
-              <Button
-                className="w-full font-bold h-11 rounded-md mt-6"
-                variant="default"
+              <Link
+                href=""
+                className="w-full inline-flex items-center justify-center font-bold h-11 rounded-md mt-6 bg-primary text-primary-foreground hover:bg-primary/90 text-sm"
+                aria-label="Book a strategy call"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Book a Strategy Call
-              </Button>
+              </Link>
             </div>
           </SheetContent>
         </Sheet>

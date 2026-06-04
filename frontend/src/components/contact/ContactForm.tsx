@@ -120,7 +120,7 @@ export function BookingForm() {
             setSubmitted(false);
             setForm(EMPTY);
           }}
-          className="mt-2 px-4 py-3.5 rounded-full text-xs font-semibold text-secondary hover:text-secondary/80 hover:bg-secondary/10 cursor-pointer transition-colors duration-200"
+          className="mt-2 h-11 sm:h-12 px-8 sm:px-10 inline-flex justify-center items-center rounded-full text-xs font-semibold text-secondary hover:text-secondary/80 hover:bg-secondary/10 cursor-pointer transition-colors duration-200"
         >
           Send another message
         </Button>

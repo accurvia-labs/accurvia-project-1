@@ -24,7 +24,7 @@ export function JoinTheJourneyCTA() {
           {/* Primary CTA */}
           <Link
             href="/contact"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 sm:px-10 py-3.5 sm:py-4 text-xs rounded-full md:text-md font-semibold transition-smooth hover-l"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 sm:px-6 py-3.5 sm:py-4 text-xs rounded-full md:text-md font-semibold transition-smooth hover-l"
           >
             Inquire for Birmingham
           </Link>
@@ -32,7 +32,7 @@ export function JoinTheJourneyCTA() {
           {/* Secondary CTA */}
           <Link
             href="/contact"
-            className="border border-primary text-primary hover:bg-primary/80 hover:text-primary-foreground px-8 sm:px-10 py-3.5 sm:py-4 text-xs rounded-full md:text-md font-semibold transition-smooth hover-l"
+            className="border border-primary text-primary hover:bg-primary/80 hover:text-primary-foreground px-4 sm:px-6 py-3.5 sm:py-4 text-xs rounded-full md:text-md font-semibold transition-smooth hover-l"
           >
             Partner with Ministry
           </Link>

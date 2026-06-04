@@ -3,7 +3,6 @@
 import Image from "next/image";
 import styles from "./StyleModuleCompanyMix/CompanyMix.module.css";
 
-// Logos imports
 import logoAllianz from "../../../public/images/allianz.png";
 import logoBank from "../../../public/images/bank.jpg";
 import logoBbc from "../../../public/images/BBC.png";
@@ -48,10 +47,10 @@ const company: Company[] = [
   { name: "Ventures Platform", src: logoVenturesPlatform, size: "large" },
 ];
 
-const sizeClasses = {
-  small: "max-h-8 sm:max-h-10",
-  medium: "max-h-10 sm:max-h-12",
-  large: "max-h-12 sm:max-h-350",
+const sizeClasses: Record<SizeVariant, string> = {
+  small: "max-h-5 sm:max-h-6",
+  medium: "max-h-6 sm:max-h-8",
+  large: "max-h-8 sm:max-h-10",
 };
 
 const caption =
@@ -59,45 +58,43 @@ const caption =
 
 export function CompanyMix() {
   return (
-    <>
-      <section
-        className="border-t border-b overflow-hidden py-2 sm:py-0"
-        aria-label="Companies and clients"
+    <section
+      className="border-t border-b overflow-hidden py-2 sm:py-0"
+      aria-label="Companies and clients"
+    >
+      {/* Carousel Viewport */}
+      <div
+        className={`${styles.viewport} h-20 sm:h-24 md:h-28 overflow-hidden`}
       >
-        {/* Carousel Viewport */}
         <div
-          className={`${styles.viewport} h-30 sm:h-34 md:h-60 pt-8  overflow-hidden`}
+          className={`${styles.track} flex items-center gap-8 sm:gap-10 md:gap-14 w-max px-4 sm:px-6 md:px-7 h-full`}
         >
-          <div
-            className={`${styles.track} flex items-center gap-8 sm:gap-10 md:gap-14 w-max px-4 sm:px-6 md:px-7 h-full`}
-          >
-            {[...company, ...company].map(
-              ({ name, src, size = "medium" }, index) => (
-                <span
-                  key={`${name}-${index}`}
-                  className="shrink-0 flex items-center justify-center w-28 sm:w-34 md:w-48 h-40 sm:h-54 md:h-64"
-                  title={name}
-                >
-                  <Image
-                    src={src}
-                    alt={name}
-                    className={`w-auto h-auto ${sizeClasses[size]} object-contain`}
-                    sizes="(max-width: 640px) 380px, (max-width: 1024px) 460px, 612px"
-                    loading="lazy"
-                  />
-                </span>
-              ),
-            )}
-          </div>
+          {[...company, ...company].map(
+            ({ name, src, size = "medium" }, index) => (
+              <span
+                key={`${name}-${index}`}
+                className="shrink-0 flex items-center justify-center w-20 sm:w-24 md:w-28"
+                title={name}
+              >
+                <Image
+                  src={src}
+                  alt={name}
+                  className={`w-auto h-auto object-contain ${sizeClasses[size]}`}
+                  sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
+                  loading="lazy"
+                />
+              </span>
+            ),
+          )}
         </div>
+      </div>
 
-        {/* Caption */}
-        {caption && (
-          <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed text-center px-6 mt-3 sm:mt-8 mb-4 sm:mb-6 md:mb-8">
-            {caption}
-          </p>
-        )}
-      </section>
-    </>
+      {/* Caption */}
+      {caption && (
+        <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed text-center px-6 mt-3 sm:mt-4 mb-4 sm:mb-6 md:mb-8">
+          {caption}
+        </p>
+      )}
+    </section>
   );
 }
