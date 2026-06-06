@@ -44,11 +44,11 @@ export function Footer() {
             <div className="flex flex-row gap-1 mt-4">
               <Input
                 placeholder="Email address"
-                className="px-4 sm:px-6 py-3 h-11 sm:h-12 border border-primary-foreground/20 w-full rounded-md bg-transparent text-primary-foreground placeholder:text-primary-foreground/40 hover:border-primary-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 transition-colors duration-200"
+                className="px-4 sm:px-6 py-3 h-11 sm:h-12 border border-primary-foreground/20 w-full rounded-md bg-transparent text-primary-foreground placeholder:text-primary-foreground/40"
               />
               <Button
                 variant="default"
-                className="bg-secondary text-muted-foreground hover:bg-secondary/90 px-4 sm:px-6 py-3 h-11 sm:h-12 rounded-md shrink-0 transition-colors duration-200"
+                className="bg-secondary text-muted-foreground hover:bg-secondary/90 px-4 sm:px-6 py-3 h-11 sm:h-12 rounded-md shrink-0"
                 aria-label="Subscribe to newsletter"
               >
                 <SendHorizontal size={18} />
