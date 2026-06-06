@@ -5,6 +5,18 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import BusinessHeroImage from "../../../public/images/genesis.jpg";
 
+interface stats {
+  num: string;
+  label: string;
+}
+
+const stats = [
+  { num: "830+", label: "Attendees / Alumni" },
+  { num: "2150+", label: "Senior Professionals" },
+  { num: "£10M+", label: "Direct Economic Impact" },
+  { num: "100+", label: "Agile Certifications" },
+];
+
 export function BusinessHero() {
   return (
     <section
@@ -63,7 +75,7 @@ export function BusinessHero() {
               priority
               className="object-cover object-center rounded-2xl"
             />
-            
+
             {/* Overlay */}
             <div className="absolute inset-0 bg-primary/30" />
 
@@ -83,6 +95,32 @@ export function BusinessHero() {
                 ends.&quot;
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats */}
+      <div
+        className="bg-primary mt-6 sm:mt-8 lg:mt-10"
+        aria-labelledby="stats-heading"
+      >
+        <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
+          <div className="grid grid-cols-4 gap-20 sm:gap-6 md:gap-8">
+            {stats.map(({ num, label }, i) => (
+              <div
+                key={label}
+                className={`flex flex-col items-center gap-1 sm:gap-2 ${
+                  i > 0 ? "border-l border-border/20" : ""
+                }`}
+              >
+                <h2 className="text-md sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary-foreground leading-none text-center">
+                  {num}
+                </h2>
+                <span className="text-primary-foreground/60 text-[7px] sm:text-[9px] md:text-[10px] tracking-[1.5px] sm:tracking-[2px] uppercase leading-tight text-center px-1">
+                  {label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
