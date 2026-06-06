@@ -120,7 +120,7 @@ export function BookingForm() {
             setSubmitted(false);
             setForm(EMPTY);
           }}
-          className="mt-2 h-11 sm:h-12 px-8 sm:px-10 inline-flex justify-center items-center rounded-full text-xs font-semibold text-secondary hover:text-secondary/80 hover:bg-secondary/10 cursor-pointer transition-colors duration-200"
+          className="mt-2 h-11 sm:h-12 px-8 sm:px-10 inline-flex justify-center items-center text-xs font-semibold text-secondary hover:text-secondary/80 hover:bg-secondary/10 cursor-pointer transition-colors duration-200"
         >
           Send another message
         </Button>
@@ -262,7 +262,7 @@ export function BookingForm() {
         type="submit"
         disabled={loading}
         suppressHydrationWarning
-        className="mt-2 h-11 sm:h-12 w-full rounded-full bg-primary text-xs font-semibold uppercase tracking-[0.24em] text-primary-foreground transition-all duration-200 hover:bg-primary/80 disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-2 h-11 sm:h-12 w-full rounded-md bg-primary text-xs font-semibold uppercase tracking-[0.24em] text-primary-foreground transition-all duration-200 hover:bg-primary/80 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {loading ? (
           <span className="flex items-center gap-2">

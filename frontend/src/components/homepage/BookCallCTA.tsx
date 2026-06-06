@@ -23,7 +23,7 @@ export function BookCallCTA() {
         {/* CTA Button */}
         <Link
           href=""
-          className="inline-flex items-center justify-center bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-8 sm:px-12 font-bold h-11 sm:h-12 text-sm rounded-md mt-8"
+          className="inline-flex items-center justify-center bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-8 sm:px-12 font-bold h-11 sm:h-12 text-sm rounded-md mt-8 transition-colors duration-200"
           aria-label="Book a strategy call"
         >
           Book a Strategy Call
