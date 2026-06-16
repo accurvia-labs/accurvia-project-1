@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { CtaLink } from "@/components/ui/ctalink";
 import { ArrowRight } from "lucide-react";
 
 interface service {
@@ -60,41 +60,43 @@ export function ProfessionalReconstruction() {
     <section aria-labelledby="reconstruction-heading" className="bg-background">
       <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 sm:mb-14 md:mb-16">
-          <div>
-            <p className="text-secondary text-[10px] font-semibold tracking-[0.22em] uppercase mb-3 sm:mb-4">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+          <div className="flex flex-col gap-6">
+            <p className="text-secondary text-xs md:text-sm font-semibold tracking-[0.22em] uppercase">
               Core Focus
             </p>
             <h2
               id="reconstruction-heading"
-              className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.03em] text-primary"
+              className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold tracking-[-0.03em] text-primary"
             >
               Professional Reconstruction
             </h2>
           </div>
-          <Link
+          <CtaLink
             href=""
-            className="inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.2em] uppercase text-primary hover:underline hover:underline-offset-2 decoration-1 hover:text-secondary transition-all duration-200 self-start sm:self-auto"
+            variant="ghost"
+            size="xs"
+            className="uppercase hover:underline hover:underline-offset-2 decoration-1 self-start sm:self-auto"
           >
             Services-01/06
             <ArrowRight size={12} />
-          </Link>
+          </CtaLink>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-border">
           {service.map(({ id, number, title, description }) => (
             <div
               key={id}
               className="bg-background p-6 sm:p-8 flex flex-col gap-4 hover:bg-border/30 transition-colors duration-200 group"
             >
-              <span className="text-[10px] font-semibold tracking-[0.2em] text-primary/30 uppercase">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-primary/30 uppercase">
                 {number}
               </span>
-              <h3 className="font-heading text-base sm:text-lg font-semibold text-primary leading-snug">
+              <h3 className="font-heading text-lg md:text-xl font-semibold text-primary leading-snug">
                 {title}
               </h3>
-              <p className="text-xs sm:text-sm text-foreground/60 leading-relaxed">
+              <p className="text-base md:text-lg text-foreground/60 leading-relaxed">
                 {description}
               </p>
             </div>

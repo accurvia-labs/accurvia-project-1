@@ -36,13 +36,13 @@ export function Experiences() {
       className="bg-border border-t border-b"
       aria-labelledby="experiences-heading"
     >
-      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl space-y-8">
         {/* Section Heading */}
-        <div className="text-center mb-10 sm:mb-14 md:mb-20">
-          <p className="block text-primary text-[10px] font-semibold tracking-[0.24em] uppercase">
+        <div className="text-center space-y-4">
+          <p className="block text-primary text-xs md:text-sm font-semibold tracking-[0.24em] uppercase">
             Our Experiences
           </p>
-          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.045em] leading-[1.05] mt-4 sm:mt-6">
+          <h2 className="text-primary text-2xl md:text-3xl lg:text-4xl font-bold tracking-[-0.045em] leading-[1.05]">
             Trusted by Industry Leaders
           </h2>
         </div>
@@ -56,13 +56,13 @@ export function Experiences() {
             >
               <CardContent className="p-0">
                 {/* Quote */}
-                <p className="text-foreground/60 font-heading text-sm sm:text-base md:text-lg italic leading-[1.55]">
+                <p className="text-foreground/60 font-heading text-base md:text-lg italic leading-[1.55]">
                   &ldquo;{quote}&rdquo;
                 </p>
               </CardContent>
 
-              <CardDescription className="p-0">
-                <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
+              <CardDescription className="p-0 space-y-6">
+                <div className="pt-6 sm:pt-8 border-t flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
                   {/* Author */}
                   <div className="flex items-center gap-3 sm:gap-4">
                     {/* Avatar */}
@@ -72,10 +72,10 @@ export function Experiences() {
 
                     {/* Name & Role */}
                     <div>
-                      <p className="text-sm sm:text-base font-semibold tracking-[-0.01em]">
+                      <p className="text-base md:text-lg font-semibold tracking-[-0.01em]">
                         {name}
                       </p>
-                      <p className="mt-1 text-foreground/60 text-[10px] font-medium tracking-[0.17em] uppercase leading-[1.2]">
+                      <p className="mt-1 text-foreground/60 text-[10px] md:text-xs font-medium tracking-[0.17em] uppercase leading-[1.2]">
                         {role}
                       </p>
                     </div>

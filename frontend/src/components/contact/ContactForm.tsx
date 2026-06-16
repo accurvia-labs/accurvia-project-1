@@ -106,21 +106,22 @@ export function BookingForm() {
             aria-hidden="true"
           />
         </div>
-        <h3 className="font-heading text-xl font-semibold text-primary">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-primary">
           Message received.
         </h3>
-        <p className="text-sm leading-relaxed text-foreground/60">
+        <p className="text-base md:text-lg leading-relaxed text-foreground/60">
           Thank you for reaching out. Dare or a member of the team will be in
           touch within 48 hours.
         </p>
         <Button
-          type="button"
           variant="outline"
+          type="button"
+          className="self-start mt-2"
+          aria-label="Send another message"
           onClick={() => {
             setSubmitted(false);
             setForm(EMPTY);
           }}
-          className="mt-2 h-11 sm:h-12 px-8 sm:px-10 inline-flex justify-center items-center text-xs font-semibold text-secondary hover:text-secondary/80 hover:bg-secondary/10 cursor-pointer transition-colors duration-200"
         >
           Send another message
         </Button>
@@ -259,38 +260,16 @@ export function BookingForm() {
 
       {/* Submit */}
       <Button
+        variant="primary"
         type="submit"
-        disabled={loading}
+        size="lg"
+        loading={loading}
+        loadingText="Sending..."
         suppressHydrationWarning
-        className="mt-2 h-11 sm:h-12 w-full rounded-md bg-primary text-xs font-semibold uppercase tracking-[0.24em] text-primary-foreground transition-all duration-200 hover:bg-primary/80 disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full uppercase tracking-[0.24em]"
+        aria-label="Submit contact form"
       >
-        {loading ? (
-          <span className="flex items-center gap-2">
-            <svg
-              className="h-3.5 w-3.5 animate-spin"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-            >
-              <circle
-                className="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                strokeWidth="4"
-              />
-              <path
-                className="opacity-75"
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8v8z"
-              />
-            </svg>
-            Sending...
-          </span>
-        ) : (
-          "Submit"
-        )}
+        Submit
       </Button>
     </form>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { CtaLink } from "@/components/ui/ctalink";
 import Image from "next/image";
 import dareOdualePortrait from "../../../public/images/dare-oduale.png";
 
@@ -21,10 +21,10 @@ export function HeroSection() {
         <div className="relative bg-primary/80 flex flex-col items-start justify-center gap-6 px-6 py-16 md:px-14 md:py-20 backdrop-blur-sm">
           <h1
             id="hero-heading"
-            className="text-3xl md:text-5xl font-bold leading-tight font-heading text-primary-foreground"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading text-primary-foreground"
           >
             I&apos;m Dare.
-            <span className="block text-xs font-medium tracking-wide">
+            <span className="block text-xs md:text-sm lg:text-xl font-medium tracking-wide">
               THINKER • TEACHER • BUSINESS DESIGNER • COACH
             </span>
           </h1>
@@ -33,42 +33,42 @@ export function HeroSection() {
             Business design and transformation coaching for founders, programme
             leads, and executives who need to move.
           </p>
-          <Link
-            href=""
-            className="inline-flex items-center justify-center bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-8 sm:px-12 font-bold h-11 sm:h-12 text-sm rounded-md"
+          <CtaLink
+            variant="foreground"
+            href="/contact"
             aria-label="Book a strategy call"
           >
             Book a Strategy Call
-          </Link>
+          </CtaLink>
         </div>
       </div>
 
       {/* Desktop Side-by-Side Layout */}
       <div className="hidden lg:flex bg-primary items-center gap-16 px-9 py-14">
-        <div className="flex-1 w-full">
+        <div className="flex-1 w-full space-y-6">
           {/* Hero Heading */}
           <h1
             id="hero-heading"
-            className="text-7xl font-bold mb-6 leading-tight font-heading text-primary-foreground"
+            className="text-6xl font-bold mb-6 leading-tight font-heading text-primary-foreground"
           >
             I&apos;m Dare.
-            <span className="block text-xs font-medium tracking-wide">
+            <span className="block text-xs md:text-sm lg:text-xl font-medium tracking-wide">
               THINKER • TEACHER • BUSINESS DESIGNER • COACH
             </span>
           </h1>
 
           {/* Hero Subheading */}
-          <p className="text-xl leading-relaxed font-body text-muted">
+          <p className="text-base md:text-lg leading-relaxed font-body text-muted">
             Business design and transformation coaching for founders, programme
             leads, and executives who need to move.
           </p>
-          <Link
-            href=""
-            className="inline-flex items-center justify-center bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-8 sm:px-12 font-bold h-11 sm:h-12 text-sm rounded-md mt-8 transition-colors duration-200"
+          <CtaLink
+            variant="foreground"
+            href="/contact"
             aria-label="Book a strategy call"
           >
             Book a Strategy Call
-          </Link>
+          </CtaLink>
         </div>
 
         {/* Image */}

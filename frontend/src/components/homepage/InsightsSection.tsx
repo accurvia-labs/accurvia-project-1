@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
+import { CtaLink } from "@/components/ui/ctalink";
 import { Plus } from "lucide-react";
 
 const BADGE_VARIANTS: Record<string, string> = {
@@ -47,15 +47,15 @@ const insights = [
 export function InsightsSection() {
   return (
     <section className="w-full" aria-labelledby="insights-heading">
-      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl space-y-8">
         {/* Section Header */}
-        <div className="mb-10 sm:mb-14 md:mb-16 text-center">
-          <p className="text-xs sm:text-sm font-inter font-bold mb-2 uppercase tracking-widest text-secondary">
+        <div className="text-center">
+          <p className="text-xs md:text-sm font-bold mb-2 uppercase tracking-widest text-secondary">
             INSIGHTS
           </p>
           <h2
             id="insights-heading"
-            className="text-2xl sm:text-3xl font-semibold font-heading text-deep-green"
+            className="text-2xl md:text-3xl lg:text-4xl font-semibold font-heading text-deep-green"
           >
             Recent Thinking
           </h2>
@@ -74,19 +74,19 @@ export function InsightsSection() {
                     <Badge
                       key={category.trim()}
                       variant="outline"
-                      className={`text-[10px] uppercase tracking-wide h-7 sm:h-8 px-3 py-2 rounded-md border-0 ${BADGE_VARIANTS[insight.variant ?? "primary"]}`}
+                      className={`text-xs md:text-sm uppercase tracking-wide h-7 sm:h-8 px-3 py-2 rounded-md border-0 ${BADGE_VARIANTS[insight.variant ?? "primary"]}`}
                     >
                       {category.trim()}
                     </Badge>
                   ))}
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mt-3 sm:mt-4 leading-snug font-heading text-slate-900">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-3 sm:mt-4 leading-snug font-heading text-slate-900">
                   {insight.title}
                 </h3>
               </CardHeader>
 
-              <CardContent className="flex flex-col grow pt-2">
-                <p className="text-sm sm:text-base mb-5 sm:mb-6 leading-relaxed grow">
+              <CardContent className="flex flex-col grow gap-3">
+                <p className="text-sm sm:text-base leading-relaxed grow">
                   {insight.description}
                 </p>
 
@@ -98,17 +98,21 @@ export function InsightsSection() {
                   </div>
 
                   {/* Read Link */}
-                  <Link
+                  <CtaLink
                     href="#"
-                    className="group text-xs font-bold text-secondary hover:text-secondary/80 transition-colors duration-200 flex items-center gap-1"
+                    variant="ghost"
+                    size="xs"
+                    className="group"
                   >
                     Read
-                    <Plus
-                      size={18}
-                      strokeWidth={3}
-                      className="group-hover:rotate-90 transition-transform duration-300"
-                    />
-                  </Link>
+                    <span>
+                      <Plus
+                        size={18}
+                        strokeWidth={3}
+                        className="group-hover:rotate-90 transition-transform duration-200"
+                      />
+                    </span>
+                  </CtaLink>
                 </div>
               </CardContent>
             </Card>
