@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { CtaLink } from "@/components/ui/ctalink";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -34,6 +34,7 @@ export function NavBar() {
         <Link
           href="/"
           className="text-xl sm:text-2xl font-bold font-heading text-primary shrink-0"
+          aria-label="Navigate to home page"
         >
           Dare Oduale
         </Link>
@@ -48,7 +49,8 @@ export function NavBar() {
                 pathname === link.href
                   ? "underline underline-offset-4 decoration-2"
                   : ""
-              }`}
+                }`}
+              aria-label={`Navigate to ${link.label} page`}
             >
               {link.label}
             </Link>
@@ -56,13 +58,17 @@ export function NavBar() {
         </div>
 
         {/* CTA Button — Desktop */}
-        <Link
-          href=""
-          className="hidden lg:inline-flex items-center justify-center px-6 xl:px-8 font-bold h-11 sm:h-12 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 text-sm shrink-0"
+        <CtaLink
+          href="/contact"
+          variant="primary"
+          size="lg"
+          className="hidden lg:inline-flex shrink-0"
           aria-label="Book a strategy call"
         >
           Book a Strategy Call
-        </Link>
+        </CtaLink>
+
+
 
         {/* Mobile Menu Trigger */}
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -76,12 +82,13 @@ export function NavBar() {
           <SheetContent side="right" className="bg-background w-72 sm:w-80 p-0">
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
 
-            <div className="flex flex-col h-full px-6 pt-10 pb-8">
+            <div className="flex flex-col px-6 py-8 gap-6">
               {/* Mobile Logo */}
               <Link
                 href="/"
-                className="text-xl font-bold font-heading text-primary mb-8"
+                className="text-xl font-bold font-heading text-primary"
                 onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Navigate to home page"
               >
                 Dare Oduale
               </Link>
@@ -98,6 +105,7 @@ export function NavBar() {
                         : ""
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
+                    aria-label={`Navigate to ${link.label} page`}
                   >
                     {link.label}
                   </Link>
@@ -105,14 +113,15 @@ export function NavBar() {
               </nav>
 
               {/* Mobile CTA */}
-              <Link
-                href=""
-                className="w-full inline-flex items-center justify-center font-bold h-11 rounded-md mt-6 bg-primary text-primary-foreground hover:bg-primary/90 text-sm"
+              <CtaLink
+                href="/contact"
+                variant="primary"
+                size="md"
                 aria-label="Book a strategy call"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Book a Strategy Call
-              </Link>
+              </CtaLink>
             </div>
           </SheetContent>
         </Sheet>
