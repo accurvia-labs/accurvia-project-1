@@ -9,18 +9,18 @@ export function LifeSchoolMandateSection() {
   return (
     <section className="bg-background">
       <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start justify-center">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center justify-center space-y-8">
           {/* LEFT COLUMN */}
-          <div className="flex-1 w-full">
-            <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-8 md:mb-12 max-w-md leading-tight">
+          <div className="flex-1 w-full space-y-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary leading-tight">
               LIFE School &
               <span className="block italic text-secondary">
                 The Integration Mandate
               </span>
-            </h1>
+            </h2>
 
-            <div className="space-y-8 md:space-y-10">
-              <p className="text-base sm:text-lg text-foreground leading-relaxed">
+            <div className="space-y-6">
+              <p className="text-base md:text-lg text-foreground leading-relaxed">
                 My core conviction rests on a simple yet profound truth: <br />
                 <span className="font-semibold">
                   Responsible Christianity and entrepreneurial faithfulness are
@@ -38,10 +38,10 @@ export function LifeSchoolMandateSection() {
                     <BrainCog size={22} className="text-primary" />
                   </div>
                   <div className="flex-1 pt-1">
-                    <h3 className="font-semibold md:font-bold text-lg md:text-2xl text-primary mb-1 md:mb-2">
+                    <h3 className="font-semibold text-xl sm:text-2xl md:text-3xl text-primary mb-1 md:mb-2">
                       Intellectual Rigor
                     </h3>
-                    <p className="text-sm md:text-base text-muted-foreground leading-6 md:leading-7">
+                    <p className="text-base md:text-lg text-primary/80 leading-6 md:leading-7">
                       Faith that isn&apos;t afraid of hard questions or
                       strategic thinking.
                     </p>
@@ -53,10 +53,10 @@ export function LifeSchoolMandateSection() {
                     <Briefcase size={22} className="text-primary" />
                   </div>
                   <div className="flex-1 pt-1">
-                    <h3 className="font-semibold md:font-bold text-lg md:text-2xl text-primary mb-1 md:mb-2">
+                    <h3 className="font-semibold text-xl sm:text-2xl md:text-3xl text-primary mb-1 md:mb-2">
                       Marketplace Faith
                     </h3>
-                    <p className="text-sm md:text-base text-muted-foreground leading-6 md:leading-7">
+                    <p className="text-base md:text-lg text-primary/80 leading-6 md:leading-7">
                       Bringing ethical brilliance and kingdom values into the
                       world of business.
                     </p>
@@ -100,10 +100,12 @@ export function LifeSchoolMandateSection() {
                 transition-opacity duration-300
               "
             >
-              <p className="text-secondary font-semibold text-xl sm:text-2xl">
+              <h3
+                className="text-secondary font-semibold text-xl sm:text-2xl md:text-3xl"
+              >
                 99
-              </p>
-              <p className="text-xs sm:text-sm text-primary-foreground/80 mt-2 leading-5 sm:leading-6">
+              </h3>
+              <p className="text-xs md:text-sm text-primary-foreground/80 mt-2 leading-5 sm:leading-6">
                 &quot;We are called to be as brilliant in the boardroom as we
                 are devoted in the sanctuary.&quot;
               </p>

@@ -59,42 +59,44 @@ const caption =
 export function CompanyMix() {
   return (
     <section
-      className="border-t border-b overflow-hidden py-2 sm:py-0"
+      className="border-t border-b overflow-hidden"
       aria-label="Companies and clients"
     >
-      {/* Carousel Viewport */}
-      <div
-        className={`${styles.viewport} h-20 sm:h-24 md:h-28 overflow-hidden`}
-      >
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl space-y-6">
+        {/* Carousel Viewport */}
         <div
-          className={`${styles.track} flex items-center gap-8 sm:gap-10 md:gap-14 w-max px-4 sm:px-6 md:px-7 h-full`}
+          className={`${styles.viewport} h-20 sm:h-24 md:h-28 overflow-hidden`}
         >
-          {[...company, ...company].map(
-            ({ name, src, size = "medium" }, index) => (
-              <span
-                key={`${name}-${index}`}
-                className="shrink-0 flex items-center justify-center w-20 sm:w-24 md:w-28"
-                title={name}
-              >
-                <Image
-                  src={src}
-                  alt={name}
-                  className={`w-auto h-auto object-contain ${sizeClasses[size]}`}
-                  sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
-                  loading="lazy"
-                />
-              </span>
-            ),
-          )}
+          <div
+            className={`${styles.track} flex items-center gap-8 sm:gap-10 md:gap-14 w-max px-4 sm:px-6 md:px-7 h-full`}
+          >
+            {[...company, ...company].map(
+              ({ name, src, size = "medium" }, index) => (
+                <span
+                  key={`${name}-${index}`}
+                  className="shrink-0 flex items-center justify-center w-20 sm:w-24 md:w-28"
+                  title={name}
+                >
+                  <Image
+                    src={src}
+                    alt={name}
+                    className={`w-auto h-auto object-contain ${sizeClasses[size]}`}
+                    sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
+                    loading="lazy"
+                  />
+                </span>
+              ),
+            )}
+          </div>
         </div>
-      </div>
 
-      {/* Caption */}
-      {caption && (
-        <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed text-center px-6 mt-3 sm:mt-4 mb-4 sm:mb-6 md:mb-8">
-          {caption}
-        </p>
-      )}
+        {/* Caption */}
+        {caption && (
+          <p className="text-xs md:text-sm text-foreground/60 leading-relaxed text-center">
+            {caption}
+          </p>
+        )}
+      </div>
     </section>
   );
 }

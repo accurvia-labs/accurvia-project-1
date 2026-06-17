@@ -9,29 +9,29 @@ export function CareerJourney() {
       <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row gap-10 sm:gap-14 lg:gap-20 items-center">
           {/* Left — Content */}
-          <div className="flex-1 w-full">
-            <p className="text-primary text-[10px] font-semibold tracking-[0.22em] uppercase">
+          <div className="flex-1 w-full space-y-6">
+            <p className="text-primary text-xs md:text-sm font-semibold tracking-[0.22em] uppercase">
               The Career Journey
             </p>
 
-            <h1 className="text-primary text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.045em] leading-[1.05] mt-6 sm:mt-8">
+            <h2 className="text-primary text-2xl md:text-3xl lg:text-4xl font-bold tracking-[-0.045em] leading-[1.05]">
               A Global Impact Across Continents &amp; Industries
-            </h1>
+            </h2>
 
-            <p className="text-foreground/60 text-sm sm:text-base leading-[1.65] text-justify mt-4 sm:mt-6">
+            <p className="text-foreground/60 text-base sm:text-lg leading-[1.65] text-justify">
               From the financial hubs of Europe to the emerging markets of Asia
               and Africa, my path as an architect has spanned multiple
               continents and some of the world&apos;s most influential
               organizations.
             </p>
 
-            <p className="text-foreground/60 text-sm sm:text-base leading-[1.65] text-justify mt-4 sm:mt-6">
+            <p className="text-foreground/60 text-base sm:text-lg leading-[1.65] text-justify">
               I&apos;ve had the privilege of driving strategic initiatives for
               leaders like BYP Paribas, Allianz, Roche, and Shell. Each role was
               a lesson in scaling complexity while maintaining the human touch.
             </p>
 
-            <blockquote className="text-primary font-heading text-sm sm:text-base md:text-lg lg:text-[20px] italic font-normal tracking-[-0.02em] leading-[1.35] mt-4 sm:mt-6">
+            <blockquote className="text-primary font-heading text-xl md:text-2xl lg:text-3xl italic tracking-[-0.02em] leading-[1.35]">
               &ldquo;The most resilient systems aren&apos;t just built with
               code; they are built with the trust and clarity of the people who
               use them.&rdquo;

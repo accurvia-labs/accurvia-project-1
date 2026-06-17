@@ -46,18 +46,18 @@ const services = [
 export function WhatWeDoSection() {
   return (
     <section className="w-full bg-border" aria-labelledby="what-we-do-heading">
-      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl space-y-8">
         {/* Section Header */}
-        <div className="mb-10 sm:mb-14 md:mb-16 text-center">
-          <p className="font-inter text-xs font-bold tracking-[1.5px] uppercase text-secondary mb-3 sm:mb-4">
+        <div className="text-center">
+          <p className="text-xs md:text-sm font-bold tracking-[1.5px] uppercase text-secondary mb-3 sm:mb-4">
             Areas of Focus
           </p>
-          <h2 className="text-2xl sm:text-3xl font-semibold">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
             Three Formats, One goal:
           </h2>
           <span
             id="what-we-do-heading"
-            className="text-2xl sm:text-3xl font-bold font-heading"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading"
           >
             GROWTH AND HAPPINESS
           </span>
@@ -87,7 +87,7 @@ export function WhatWeDoSection() {
                   >
                     <CardHeader className="pb-4">
                       <h3
-                        className={`text-lg sm:text-xl md:text-2xl font-bold mb-2 font-heading`}
+                        className={`text-xl sm:text-2xl md:text-3xl font-bold mb-2 font-heading`}
                       >
                         {title}
                       </h3>
@@ -124,7 +124,7 @@ export function WhatWeDoSection() {
 
                   {/* Bottom Content */}
                   <CardContent className="flex flex-col gap-2 grow bg-background px-5 sm:px-6 py-4 sm:py-5">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-secondary">
+                    <p className="text-xs md:text-sm font-semibold uppercase tracking-wider text-secondary">
                       {serviceOffering}
                     </p>
                     <p className="text-sm sm:text-base leading-relaxed">
