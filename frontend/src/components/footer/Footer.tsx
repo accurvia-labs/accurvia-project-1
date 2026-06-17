@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/cta-button";
 import { CtaLink } from "@/components/ui/ctalink";
 import { SendHorizontal } from "lucide-react";
 
