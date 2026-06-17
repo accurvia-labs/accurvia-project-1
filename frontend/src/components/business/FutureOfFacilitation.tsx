@@ -3,20 +3,19 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import FacilitationImage from "../../../public/images/facilitation.png";
-import { motion } from "framer-motion";
 
 const features = [
   {
     id: "scaled-agile",
     number: "01",
     title: "Strategy Reconstruction Lab",
-    icon: <ArrowRight size={11} className="text-primary-foreground" />,
+    icon: <ArrowRight size={16} className="text-primary-foreground" />,
   },
   {
     id: "human-centric",
     number: "02",
     title: "Human-Centric Agile Mastery",
-    icon: <ArrowRight size={11} className="text-primary-foreground" />,
+    icon: <ArrowRight size={16} className="text-primary-foreground" />,
   },
 ];
 
@@ -26,14 +25,14 @@ export function FutureOfFacilitation() {
       <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
           {/* Left — Content */}
-          <div className="flex-1 w-full">
+          <div className="flex-1 w-full space-y-6">
             <h2
               id="facilitation-heading"
-              className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-[-0.03em] text-primary-foreground leading-[1.05] mb-6 sm:mb-8"
+              className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-[-0.03em] text-primary-foreground leading-[1.05]"
             >
               The Future of Facilitation.
             </h2>
-            <p className="text-sm sm:text-base text-primary-foreground/60 leading-relaxed mb-8 max-w-md">
+            <p className="text-base md:text-lg text-primary-foreground/60 leading-relaxed max-w-md">
               We are currently building the next generation of business
               designers. Our programs are designed for deep impact, focusing on
               the human elements that drive sustainable growth.
@@ -42,7 +41,7 @@ export function FutureOfFacilitation() {
             <div className="flex flex-col gap-3 sm:gap-4">
               {features.map((feature) => (
                 <div key={feature.id} className="flex items-center gap-3 border-b border-border/20 pb-3">
-                  <p className="text-secondary text-xs font-semibold">
+                  <p className="text-secondary text-xs md:text-sm font-semibold">
                     {feature.number}
                   </p>
                   <p className="text-sm sm:text-base text-primary-foreground font-medium">
@@ -67,23 +66,6 @@ export function FutureOfFacilitation() {
                 className="object-cover"
               />
             </div>
-
-            {/* Floating card */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{
-                duration: 3.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 2,
-              }}>
-            <div className="absolute -bottom-10 left-0 sm:-left-6 bg-secondary text-primary-foreground rounded-2xl p-4 sm:p-6 w-[60%] sm:w-45">
-              <p className="font-semibol text-sm sm:text-md">
-                  Built for <br/>
-                  Permanent Impact.
-              </p>
-            </div>
-            </motion.div>
           </div>
         </div>
       </div>

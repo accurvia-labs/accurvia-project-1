@@ -29,22 +29,22 @@ const achievements = [
 export function KeyAchievements() {
   return (
     <section className="bg-border" aria-labelledby="key-achievements-heading">
-      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl space-y-10">
         {/* Section Heading */}
-        <div className="text-center">
-          <p className="text-primary text-[10px] font-semibold tracking-[0.24em] uppercase">
+        <div className="text-center space-y-6">
+          <p className="text-primary text-xs md:text-sm font-semibold tracking-[0.24em] uppercase">
             Key Achievements
           </p>
           <h2
             id="key-achievements-heading"
-            className="text-primary text-2xl sm:text-3xl md:text-4xl italic font-normal tracking-[-0.045em] leading-[1.05] mt-4 sm:mt-6"
+            className="text-primary text-2xl md:text-3xl lg:text-4xl italic font-bold tracking-[-0.045em] leading-[1.05]"
           >
             Defining Moments of Impact
           </h2>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8 mt-10 sm:mt-14 md:mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
           {achievements.map((achievement, index) => (
             <Card
               key={index}
@@ -52,11 +52,11 @@ export function KeyAchievements() {
             >
               <CardHeader className="p-0 mb-3 sm:mb-4">
                 <span className="mb-3 sm:mb-4 block">{achievement.icon}</span>
-                <p className="text-base sm:text-lg font-semibold tracking-[-0.02em] leading-[1.32]">
+                <h3 className="text-lg md:text-xl font-semibold tracking-[-0.02em] leading-[1.32]">
                   {achievement.title}
-                </p>
+                </h3>
               </CardHeader>
-              <CardContent className="p-0 text-foreground/60 text-xs sm:text-sm leading-[1.65]">
+              <CardContent className="p-0 text-foreground/60 text-sm sm:text-base leading-[1.65]">
                 {achievement.desc}
               </CardContent>
             </Card>
