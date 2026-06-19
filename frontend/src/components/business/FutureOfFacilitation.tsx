@@ -56,7 +56,7 @@ export function FutureOfFacilitation() {
           </div>
 
           {/* Right — Image with overlay card */}
-          <div className="flex-1 w-full relative pb-16 sm:pb-20">
+          <div className="flex-1 w-full relative">
             <div className="relative w-full h-64 sm:h-96 md:h-120 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
               <Image
                 src={FacilitationImage}

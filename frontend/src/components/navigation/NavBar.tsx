@@ -44,7 +44,7 @@ export function NavBar() {
             <Link
               key={link.label}
               href={link.href}
-              className={`text-sm xl:text-base font-medium transition-all text-primary hover:underline hover:underline-offset-4 decoration-2 hover:text-secondary ${
+              className={`text-base xl:text-lg font-medium transition-all text-primary hover:underline hover:underline-offset-4 decoration-2 hover:text-secondary ${
                 pathname === link.href
                   ? "underline underline-offset-4 decoration-2"
                   : ""

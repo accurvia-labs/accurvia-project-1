@@ -30,9 +30,9 @@ const variantClasses: Record<NonNullable<CtaLinkProps["variant"]>, string> = {
 
 const sizeClasses: Record<NonNullable<CtaLinkProps["size"]>, string> = {
   xs: "h-8 px-4 text-xs sm:text-sm",
-  sm: "h-11 px-4 sm:h-12 sm:px-6  text-xs sm:text-base",
-  md: "h-11 px-8 sm:h-12 sm:px-10 text-base",
-  lg: "h-11 px-10 sm:h-12 sm:px-12 text-base",
+  sm: "h-11 px-4 sm:h-12 sm:px-6  text-xs sm:text-sm",
+  md: "h-11 px-8 sm:h-12 sm:px-10 text-sm md:text-base",
+  lg: "h-11 px-10 sm:h-12 sm:px-12 text-sm md:text-base",
 };
 
 export function CtaLink({

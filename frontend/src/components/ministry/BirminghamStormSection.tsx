@@ -14,7 +14,7 @@ export function BirminghamStormSection() {
             THE 2025 MANDATE
           </Badge>
 
-          <h2 className="text-primary-foreground text-2xl md:text-3xl lg:text-4xl">
+          <h2 className="text-primary-foreground font-semibold text-2xl md:text-3xl lg:text-4xl">
             Birmingham: Planting Through the Storm
           </h2>
 
