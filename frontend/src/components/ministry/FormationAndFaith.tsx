@@ -26,35 +26,35 @@ const formationAreas = [
 export function FormationAndFaith() {
   return (
     <section className="bg-border">
-      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 md:px-8 py-10 sm:py-14 md:py-16 mx-auto max-w-7xl space-y-8">
         {/* Section Heading */}
-        <div className="text-center">
+        <div className="text-center space-y-4">
           <h2 className="text-primary text-2xl md:text-3xl lg:text-4xl italic font-normal tracking-[-0.045em] leading-[1.05]">
             Formation & Faith
           </h2>
-          <p className=" text-primary text-sm md:text-base font-semibold tracking-[0.24em] uppercase my-6">
+          <p className=" text-primary text-sm md:text-base font-semibold tracking-[0.24em] uppercase">
             The evolution of ministry shaped how I think about transformation
             across any domain.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
           {formationAreas.map(({ badge, title, description }, index) => (
             <Card
               key={index}
-              className="border-border bg-card hover:shadow-md hover:scale-105 overflow-hidden filter drop-shadow-xl border-0 py-6 gap-0 transition-all duration-300"
+              className="border-border bg-card hover:shadow-md hover:scale-105 overflow-hidden filter drop-shadow-xl border-0 py-6 gap-0 transition-all duration-300 space-y-4"
             >
               {/* Icon/Header */}
               {badge && (
-                <CardHeader className="pb-4">
-                  <div className="text-secondary text-2xl md:text-3xl italic font-heading flex items-center mt-4">
+                <CardHeader className="">
+                  <div className="text-secondary text-2xl md:text-3xl italic font-heading flex items-center">
                     {badge}
                   </div>
                 </CardHeader>
               )}
 
               {/* Content */}
-              <CardContent>
-                <h3 className="text-xl sm:text-2xl md:text-3xl mb-4">
+              <CardContent className="space-y-4">
+                <h3 className="text-xl sm:text-2xl md:text-3xl">
                   {title}
                 </h3>
                 <p

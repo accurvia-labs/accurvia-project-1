@@ -9,9 +9,9 @@ export function HeroSection() {
     <section className="w-full" aria-labelledby="hero-heading">
       {/* Mobile Background Image with Overlay */}
       <div
-        className="lg:hidden relative w-full bg-cover bg-center bg-no-repeat"
+        className="lg:hidden relative w-full bg-cover bg-top bg-no-repeat"
         style={{
-          backgroundImage: `url(${dareOdualePortrait.src})`,
+          backgroundImage: `url(${dareOdualePortrait.src})`
         }}
       >
         {/* Overlay */}
@@ -74,14 +74,14 @@ export function HeroSection() {
         {/* Image */}
         <div className="relative w-full flex-1 shadow-2xl shadow-foreground rounded-2xl overflow-hidden">
           <div className="rounded-2xl bg-muted overflow-hidden">
-            <div className="relative filter drop-shadow-2xl drop-shadow-foreground w-full h-140 aspect-4/5 origin-top-left rotate-25 translate-y-10 hover:rotate-0 hover:translate-y-0 hover:translate-x-0 transition-all duration-700 ease-in-out">
+            <div className="relative filter drop-shadow-2xl drop-shadow-foreground w-full h-110 aspect-4/3 origin-top-left rotate-25 hover:rotate-0 transition-all duration-700 ease-in-out">
               <Image
                 src={dareOdualePortrait}
                 alt="Dare Oduale portrait"
                 fill
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover w-full h-full rounded-2xl"
+                className="object-cover object-top w-full h-full rounded-2xl"
               />
             </div>
           </div>

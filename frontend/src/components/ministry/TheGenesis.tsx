@@ -27,12 +27,12 @@ export function TheGenesis() {
 
           {/* Content */}
           <div className="flex-1 w-full">
-            <div className="flex flex-col gap-5 lg:gap-8">
+            <div className="space-y-6">
               <p className="text-primary text-xs md:text-sm font-semibold tracking-[0.22em] uppercase">
                 The Genesis
               </p>
 
-              <h2 className="text-primary text-2xl md:text-3xl lg:text-4xl font-bold tracking-[-0.045em] leading-[1.05] mt-6 md:mt-8">
+              <h2 className="text-primary text-2xl md:text-3xl lg:text-4xl font-bold tracking-[-0.045em] leading-[1.05]">
                 The Boy in the Third Row
               </h2>
 
